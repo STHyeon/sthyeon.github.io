@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+// @import "lib/slick.css";
+
+@import "common/variables";
+@import "common/mixins";
+@import "common/placeholders";
+@import "common/base";
+// https://webclub.tistory.com/518 참고 사이트
+// 3중첩 넘어가지않게
+// 네이밍 _ (Underbar)로 사용하는 것을 권장
+
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+
+@include fontface("Noto Sans KR", "NotoSansKR-Regular.otf", "300");
+@include fontface("evrmt", "EnvironmentB.woff2", "normal");
+@include fontface("poppins", "Poppins-Bold.ttf", "700");
+
+@include keyframes("leadArrow") {
+    0% {bottom: 40px;}
+    50% {bottom: 50px;}
+    100% {bottom: 40px;}
+}
+
+@include keyframes("waveDrift") {
+    0%{margin-left: 0;}
+    100%{margin-left: -1600px;}
+}
+
+@include keyframes("swell") {
+    0%, 100% {
+      transform: translate3d(0,-25px,0);
+    }
+
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+}
