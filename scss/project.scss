@@ -10,34 +10,330 @@
 // 3중첩 넘어가지않게
 // 네이밍 _ (Underbar)로 사용하는 것을 권장
 
-@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
 
-@include fontface("Noto Sans KR", "NotoSansKR-Regular.otf", "300");
-@include fontface("evrmt", "EnvironmentB.woff2", "normal");
-@include fontface("poppins", "Poppins-Bold.ttf", "700");
+@include fontface("Noto Sans KR", "NotoSansKR-Regular.otf", "300"); // 기본
+@include fontface("evrmt", "EnvironmentB.woff2", "normal"); // 한글
+@include fontface("poppins", "Poppins-Bold.ttf", "700"); // 영어, 한글 x
+@include fontface("Roboto", "Roboto-Regular.ttf", "400"); // 영어, 한글 x
+@include fontface("Montserrat", "Montserrat-Medium.ttf", "700"); // 영어, 한글 x
 
 @include keyframes("leadArrow") {
-    0% {bottom: 40px;}
-    50% {bottom: 50px;}
-    100% {bottom: 40px;}
+    0% {
+        bottom: 40px;
+    }
+    50% {
+        bottom: 50px;
+    }
+    100% {
+        bottom: 40px;
+    }
 }
 
 @include keyframes("waveDrift") {
-    0%{margin-left: 0;}
-    100%{margin-left: -1600px;}
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
 }
 
 @include keyframes("swell") {
-    0%, 100% {
-      transform: translate3d(0,-25px,0);
+    0%,
+    100% {
+        transform: translate3d(0, -25px, 0);
     }
 
     50% {
-      transform: translate3d(0,5px,0);
+        transform: translate3d(0, 5px, 0);
     }
+}
+
+.parallax-slider {
+    h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font: 700 100px/1.1 "Montserrat", "sans-serif";
+        transform: translate(-50%, -50%);
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+    }
+}
+
+.swiper-container {
+    padding: 10px 0;
 }
 
 .wrap {
     width: 100%;
     height: 100%;
+
+    & * {
+        font-family: "Noto Sans KR";
+    }
+
+    .nav_box {
+        z-index: 999999;
+        padding: 6px 32px;
+        background: #113448;
+
+        > ul {
+            display: flex;
+            height: 100%;
+
+            li {
+                width: 25%;
+                height: 100%;
+                font: 400 16px/55px "Montserrat", "sans-self";
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: solid;
+                }
+
+                a {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    .box {
+        // border: 1px solid;
+
+        .section_title {
+            padding: 0 0 8px;
+            font: 500 13px/1.1 "Montserrat", "sans-serif";
+            color: #14bf98;
+        }
+
+        .title {
+            padding: 0 0 20px;
+            font: 700 28px/1.1 "Montserrat", "sans-serif";
+        }
+    }
+
+    .section1 {
+        .about {
+            .myself_box {
+                display: flex;
+                padding: 110px 0 48px;
+
+                .myself_img {
+                    width: 45%;
+
+                    > img {
+                        width: 100%;
+                        border-radius: 5px;
+                    }
+                }
+
+                .myself_txt {
+                    width: 55%;
+                    padding: 0 0 0 60px;
+
+                    > p {
+                        margin: 0 0 16px;
+                        color: #787976;
+                    }
+                }
+            }
+
+            .additional_box {
+                display: flex;
+                justify-content: space-around;
+                padding: 48px 0 46px;
+
+                .hexagon {
+                    width: 96px;
+                    height: 96px;
+                    margin: 0 auto 16px;
+                    background: url(../img/hexagon-green.svg) center center no-repeat;
+
+                    i {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        font-size: 32px;
+                        color: #ffffff;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .card_body {
+                    p {
+                        color: #787976;
+                    }
+
+                    .card_title {
+                        margin: 0 0 10px;
+                        font: 700 20px/1.1 "Montserrat", "sans-serif";
+                        color: #484a46;
+                    }
+                }
+            }
+        }
+
+        .skill {
+            .area_box {
+                display: flex;
+
+                .area {
+                    width: 50%;
+                    height: 576px;
+                }
+            }
+
+            .area1 {
+                background: url(../img/details-1-background.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            .area2,
+            .area3 {
+                padding: 0 35px;
+            }
+
+            .area4 {
+                background: url(../img/details-2-background.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            .area_nav {
+                width: 100%;
+                margin: 0 0 34px;
+                padding: 110px 0 0;
+
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+
+                    .nav_link {
+                        color: #c1cace;
+                        font: 700 22px/1.1 "Montserrat", "sans-serif";
+                        cursor: pointer;
+
+                        &.active {
+                            color: #14bf98;
+                        }
+
+                        i {
+                            padding: 0 5px 0 0;
+                        }
+                    }
+                }
+            }
+
+            .side_area_box {
+                .side_title {
+                    margin: 0 0 8px;
+                    color: #484a46;
+                    font: 700 20px/1.1 "Montserrat", "sans-serif";
+                }
+
+                .chart_box {
+                    .chart_title {
+                        margin: 0 0 4px;
+                        font: 600 14px/1.1 "Roboto", "sans-serif";
+                    }
+
+                    .chart_bar {
+                        width: 100%;
+                        height: 22px;
+                        margin: 0 0 18px;
+                        border-radius: 3px;
+                        background: #eaeaea;
+
+                        span {
+                            display: block;
+                            height: 100%;
+                            background: linear-gradient(to bottom right, #14bf98, #1bd1a7);
+                        }
+
+                        .chart_HTML {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .project {
+            padding: 104px 0 112px;
+            background: #fbfbfb;
+
+            .project_card {
+                width: 340px;
+                height: 391px;
+                background: #ffffff;
+                box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.10196);
+
+                .card_img > img {
+                    width: 100%;
+                }
+
+                .txt_box {
+                    padding: 10px 44px;
+                }
+                .sub_title {
+                    // padding: 5px;
+                    // border-radius: 20px;
+                    font-size: 20px;
+                    // color: #ffffff;
+                    // background: #444444;
+                }
+            }
+
+            .project_nav {
+                padding: 0 0 40px;
+
+                ul {
+                    border-bottom: 1px solid #ddd;
+                }
+
+                li {
+                    display: block;
+                    float: left;
+                    position: relative;
+                    left: 50%;
+                    margin: 0 0 -1px;
+                    transform: translateX(-50%);
+
+                    > span {
+                        display: block;
+                        margin: 0 2px 0 0;
+                        padding: 10px 15px;
+                        border-radius: 4px 4px 0 0;
+                        font-size: 30px;
+                        cursor: pointer;
+                    }
+
+                    &.active > span {
+                        border: 1px solid #ddd;
+                        border-bottom-color: transparent;
+                        color: #e3b100;
+                        background: #f9f9f9;
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media(1180px) {
+    .box {
+        padding: 0 16px;
+    }
+
+    .box.skill {
+        padding: 0;
+    }
 }

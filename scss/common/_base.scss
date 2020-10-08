@@ -12,7 +12,10 @@ html, body, pre
     margin: 0;
     padding: 0;
     border: 0;
-    font: 12px/13px "Nanum Gothic", "굴림", Gulim, Arial, Tahoma;
+    font: 16px "Nanum Gothic", "굴림", Gulim, Arial, Tahoma;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: #000;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -192,6 +195,9 @@ caption {
 //  두줄처리 
 // -webkit-line-clamp: 이걸로 2, 3, 4 ...줄 설정 가능
 .text-overflow2 { display: -webkit-box; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+
+// nav 고정
+.sticky {position: fixed; top: 0; width: 100%;}
 
 // width %
 @for $i from 1 through 10 {
