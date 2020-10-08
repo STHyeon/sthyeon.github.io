@@ -39,16 +39,18 @@
                     <li><a href="">waaa</a></li>
                 </ul>
             </nav>
-            <section id="about" class="section1">
-                <div class="about box">
+            <section class="section1">
+                <div id="about" class="about box">
                     <div class="inner">
                         <div class="myself_box">
                             <div class="myself_img">
                                 <img src="../img/intro-office.jpg" alt="" />
                             </div>
                             <div class="myself_txt">
-                                <div class="section_title">INTRO</div>
-                                <h3 class="title">A</h3>
+                                <div class="box_title">
+                                    <div class="section_title">INTRO</div>
+                                    <h3 class="title">A</h3>
+                                </div>
                                 <p>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
                                     not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
@@ -144,17 +146,19 @@
 
                 <div class="project box">
                     <div class="inner">
-                        <div class="section_title">INTRO</div>
-                        <h3 class="title">A</h3>
+                        <div class="box_title">
+                            <div class="section_title">INTRO</div>
+                            <h3 class="title">A</h3>
+                        </div>
                         <div class="project_nav">
-                            <ul class="clearfix">
-                                <li class="active"><i class="fa fa-th"></i>!</li>
-                                <li><span>i</span></li>
-                                <li><span>3</span></li>
+                            <ul>
+                                <li class="is_checked">AAA</li>
+                                <li>BBB</li>
+                                <li>CCC</li>
                             </ul>
                         </div>
-                        <div>
-                            <div class="swiper-container">
+                        <div style="position: relative">
+                            <div class="swiper-container" style="width: 90%">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide project_card">
                                         <div class="card_img"><img src="../img/back.png" alt="" /></div>
@@ -166,13 +170,9 @@
                                     <div class="swiper-slide project_card"><div class="txt_box">Slide 3</div></div>
                                     <div class="swiper-slide project_card"><div class="txt_box">Slide 3</div></div>
                                 </div>
-                                <!-- If we need pagination -->
-                                <!-- <div class="swiper-pagination"></div> -->
-
-                                <!-- If we need navigation buttons -->
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
                             </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
 
                         <div style="display: none">
@@ -191,6 +191,14 @@
                                 <div class="swiper-button-next"></div> -->
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section2">
+                <div class="call box">
+                    <div class="box_title">
+                        <div class="section_title">INTRO</div>
+                        <h3 class="title">A</h3>
                     </div>
                 </div>
             </section>
@@ -237,10 +245,9 @@
 
                 function navScroll() {
                     if (window.pageYOffset > sticky) {
-                        header.classList.add("sticky");
-                        // $(".myself_box").css("padding-top", 110);
+                        $(header).addClass("sticky");
                     } else {
-                        header.classList.remove("sticky");
+                        $(header).removeClass("sticky");
                     }
                 }
 
@@ -248,18 +255,33 @@
                     navScroll();
                 };
 
+                // 헤더 네비 스크롤
+                $(".nav_box li a").click(function (e) {
+                    var target = $(this);
+                    var element = target.attr("href");
+                    $(".nav_box li a").removeClass("active");
+                    target.addClass("active");
+
+                    $("html, body").animate(
+                        {
+                            scrollTop: $(element).offset().top,
+                        },
+                        800,
+                    );
+                });
+
                 // skill 네비
                 $(".area_nav .nav_link").click(function () {
                     $(".area_nav .nav_link").removeClass("active");
                     $(this).addClass("active");
                     $(".side_area").hide();
-                    $("#" + $(this).attr("id") + "_box").show();
+                    $("#" + $(this).attr("id") + "_box").fadeIn();
                 });
 
                 // 탭 메뉴
                 $(".project_nav li").click(function () {
-                    $(".project_nav li").removeClass("active");
-                    $(this).addClass("active");
+                    $(".project_nav li").removeClass("is_checked");
+                    $(this).addClass("is_checked");
                 });
             });
         </script>
