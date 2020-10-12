@@ -440,9 +440,11 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 @keyframes swell { 0%, 100% { -webkit-transform: translate3d(0, -25px, 0); transform: translate3d(0, -25px, 0); }
   50% { -webkit-transform: translate3d(0, 5px, 0); transform: translate3d(0, 5px, 0); } }
 
-.parallax-slider h2 { position: absolute; top: 50%; left: 50%; font: 700 100px/1.1 "Montserrat", "sans-serif"; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.parallax-slider .title { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
-.parallax-slider .background { width: 100%; height: 100%; opacity: 0.6; }
+.parallax-slider h2 { font: 700 100px/1.1 "Montserrat", "sans-serif"; -webkit-animation: bounce 2s infinite; animation: bounce 2s infinite; }
+
+.parallax-slider .background { width: 100%; height: 100%; opacity: 0.7; }
 
 .swiper-container { padding: 10px 0; }
 
@@ -450,15 +452,15 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .wrap * { font-family: "Noto Sans KR"; }
 
-.wrap .nav_box { z-index: 999999; padding: 6px 32px; background: #113448; }
+.wrap .nav_box { z-index: 999999; height: 55px; background: #113448; }
 
-.wrap .nav_box > ul { display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; }
+.wrap .nav_box > ul { height: 100%; font-size: 0; line-height: 0; }
 
-.wrap .nav_box > ul li { width: 25%; height: 100%; font: 400 16px/55px "Montserrat", "sans-self"; text-align: center; cursor: pointer; }
-
-.wrap .nav_box > ul li:hover { -webkit-text-decoration: solid; text-decoration: solid; }
+.wrap .nav_box > ul li { display: inline-block; width: 25%; height: 100%; font: 400 16px/55px "Montserrat", "sans-self"; text-align: center; cursor: pointer; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #14bf98), color-stop(50%, transparent)); background-image: linear-gradient(to top, #14bf98 50%, transparent 50%); background-size: 100% 200%; -webkit-transition: background-position 200ms ease-in-out; transition: background-position 200ms ease-in-out; }
 
 .wrap .nav_box > ul li a { color: #ffffff; }
+
+.wrap .nav_box > ul li:hover { background-position: bottom; }
 
 .wrap .box .section_title { padding: 0 0 8px; font: 500 13px/1.1 "Montserrat", "sans-serif"; color: #14bf98; }
 
@@ -484,15 +486,15 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .wrap .section1 .about .additional_box .card_body .card_title { margin: 0 0 10px; font: 700 20px/1.1 "Montserrat", "sans-serif"; color: #484a46; }
 
+.wrap .section1 .skill { padding: 60px 0; background: #fbfbfb; }
+
 .wrap .section1 .skill .area_box { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 .wrap .section1 .skill .area_box .area { width: 50%; height: 576px; }
 
-.wrap .section1 .skill .area1 { background: url(../img/details-1-background.jpg) center center no-repeat; background-size: cover; }
+.wrap .section1 .skill .area1 img { width: 100%; height: 100%; }
 
-.wrap .section1 .skill .area2, .wrap .section1 .skill .area3 { padding: 0 35px; background: #fbfbfb; }
-
-.wrap .section1 .skill .area4 { background: url(../img/details-2-background.jpg) center center no-repeat; background-size: cover; }
+.wrap .section1 .skill .area2 { padding: 0 35px; }
 
 .wrap .section1 .skill .area_nav { width: 100%; margin: 0 0 34px; padding: 110px 0 0; }
 
@@ -506,6 +508,10 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .wrap .section1 .skill .area_nav ul .nav_link i { padding: 0 5px 0 0; }
 
+.wrap .section1 .skill .side_area_box .side_area { display: none; }
+
+.wrap .section1 .skill .side_area_box .side_area.active { display: block; }
+
 .wrap .section1 .skill .side_area_box .side_title { margin: 0 0 8px; color: #484a46; font: 700 20px/1.1 "Montserrat", "sans-serif"; }
 
 .wrap .section1 .skill .side_area_box .chart_box .chart_title { margin: 0 0 4px; font: 600 14px/1.1 "Roboto", "sans-serif"; }
@@ -514,7 +520,23 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .wrap .section1 .skill .side_area_box .chart_box .chart_bar span { display: block; height: 100%; background: -webkit-gradient(linear, left top, right bottom, from(#14bf98), to(#1bd1a7)); background: linear-gradient(to bottom right, #14bf98, #1bd1a7); }
 
-.wrap .section1 .skill .side_area_box .chart_box .chart_bar .chart_HTML { width: 50%; }
+.wrap .section1 .skill .side_area_box .chart_box .skillIcon { width: 60px; }
+
+.wrap .section1 .skill .side_area_box .side_area_1 .chart_box:nth-child(2) .chart_bar span.animation { -webkit-animation: chartFill1 2s forwards; animation: chartFill1 2s forwards; }
+
+@-webkit-keyframes chartFill1 { from { width: 0; }
+  to { width: 60%; } }
+
+@keyframes chartFill1 { from { width: 0; }
+  to { width: 60%; } }
+
+.wrap .section1 .skill .side_area_box .side_area_1 .chart_box:nth-child(3) .chart_bar span.animation { -webkit-animation: chartFill2 2s forwards; animation: chartFill2 2s forwards; }
+
+@-webkit-keyframes chartFill2 { from { width: 0; }
+  to { width: 40%; } }
+
+@keyframes chartFill2 { from { width: 0; }
+  to { width: 40%; } }
 
 .wrap .section1 .project { padding: 104px 0 112px; }
 

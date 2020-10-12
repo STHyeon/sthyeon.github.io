@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-// @import "lib/slick.css";
-
 @import "common/variables";
 @import "common/mixins";
 @import "common/placeholders";
@@ -50,19 +48,35 @@
     }
 }
 
+@mixin nthFill($name, $width) {
+    @include keyframes($name) {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: percentage($width/100);
+        }
+    }
+}
+
 .parallax-slider {
-    h2 {
+    .title {
         position: absolute;
         top: 50%;
         left: 50%;
-        font: 700 100px/1.1 "Montserrat", "sans-serif";
         transform: translate(-50%, -50%);
+    }
+
+    h2 {
+        font: 700 100px/1.1 "Montserrat", "sans-serif";
+        animation: bounce 2s infinite;
     }
 
     .background {
         width: 100%;
         height: 100%;
-        opacity: 0.6;
+        opacity: 0.7;
     }
 }
 
@@ -80,26 +94,32 @@
 
     .nav_box {
         z-index: 999999;
-        padding: 6px 32px;
+        height: 55px;
         background: #113448;
 
         > ul {
-            display: flex;
             height: 100%;
+            font-size: 0;
+            line-height: 0;
 
             li {
+                display: inline-block;
                 width: 25%;
                 height: 100%;
                 font: 400 16px/55px "Montserrat", "sans-self";
                 text-align: center;
                 cursor: pointer;
-
-                &:hover {
-                    text-decoration: solid;
-                }
+                background-image: linear-gradient(to top, #14bf98 50%, transparent 50%); // 아래에서 위로
+                background-size: 100% 200%;
+                transition: background-position 200ms ease-in-out;
 
                 a {
                     color: #ffffff;
+                }
+
+                &:hover {
+                    background-position: bottom;
+                    // border-bottom: 5px solid #14bf98;
                 }
             }
         }
@@ -182,6 +202,9 @@
         }
 
         .skill {
+            padding: 60px 0;
+            background: #fbfbfb;
+
             .area_box {
                 display: flex;
 
@@ -192,19 +215,14 @@
             }
 
             .area1 {
-                background: url(../img/details-1-background.jpg) center center no-repeat;
-                background-size: cover;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
 
-            .area2,
-            .area3 {
+            .area2 {
                 padding: 0 35px;
-                background: #fbfbfb;
-            }
-
-            .area4 {
-                background: url(../img/details-2-background.jpg) center center no-repeat;
-                background-size: cover;
             }
 
             .area_nav {
@@ -238,6 +256,14 @@
             }
 
             .side_area_box {
+                .side_area {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
                 .side_title {
                     margin: 0 0 8px;
                     color: #484a46;
@@ -262,9 +288,29 @@
                             height: 100%;
                             background: linear-gradient(to bottom right, #14bf98, #1bd1a7);
                         }
+                    }
 
-                        .chart_HTML {
-                            width: 50%;
+                    .skillIcon {
+                        width: 60px;
+                    }
+                }
+
+                .side_area_1 {
+                    .chart_box {
+                        &:nth-child(2) {
+                            .chart_bar span.animation {
+                                @include nthFill("chartFill1", 60);
+                                // width: 60%;
+                                animation: chartFill1 2s forwards;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            .chart_bar span.animation {
+                                @include nthFill("chartFill2", 40);
+                                // width: 60%;
+                                animation: chartFill2 2s forwards;
+                            }
                         }
                     }
                 }
