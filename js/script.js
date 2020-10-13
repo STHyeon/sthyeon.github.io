@@ -25,7 +25,7 @@ $(function () {
                 spaceBetween: 20,
             },
             // when window width is >= 640px
-            768: {
+            989: {
                 slidesPerView: 3,
                 spaceBetween: 30,
             },
@@ -68,8 +68,8 @@ $(function () {
     }
 
     // skill navi
-    $(".area_nav .nav_link").click(function () {
-        $(".area_nav .nav_link").removeClass("active");
+    $(".nav_area .nav_link").click(function () {
+        $(".nav_area .nav_link").removeClass("active");
         $(this).addClass("active");
         $(".side_area").hide();
         $("#" + $(this).attr("id") + "_box").fadeIn();
@@ -78,10 +78,12 @@ $(function () {
     // skill percent animation
     function SkillPercent() {
         var sct = $(window).scrollTop();
-        var skill = $("#box_type01").offset();
+        var skill = $("#box_type01").offset().top;
+        console.log(skill);
 
-        if (sct > skill.top) {
+        if (sct > skill) {
             $(".chart_bar span").addClass("animation"); // 한 번만
+            console.log("hie");
         } else {
             // $(".chart_bar span").removeClass("animation"); // 여러 번
         }
@@ -140,8 +142,8 @@ $(function () {
     });
 
     // project navi
-    $(".project_nav li").click(function () {
-        $(".project_nav li").removeClass("is_checked");
+    $(".nav_project li").click(function () {
+        $(".nav_project li").removeClass("is_checked");
         $(this).addClass("is_checked");
     });
 

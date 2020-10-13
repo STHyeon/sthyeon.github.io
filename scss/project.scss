@@ -142,10 +142,12 @@
     04. box_type04 Chart 박스
     05. box_type05 Project 박스
     06. box_type06 Footer 박스
+    06. box_type07 Footer Card 박스
     */
 
     .box_type {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         height: 100%;
@@ -229,7 +231,7 @@
     }
 
     .skill {
-        background: #fbfbfb;
+        background: #f2f2f2;
 
         .box_type03 {
             display: flex;
@@ -316,13 +318,22 @@
                         }
                     }
 
-                    .icon_skill {
-                        width: 60px;
+                    .box_image {
+                        display: flex;
+
+                        .icon_skill {
+                            width: 40px;
+                            margin: 0 0 10px;
+
+                            & + .icon_skill {
+                                margin: 0 0 10px 10px;
+                            }
+                        }
                     }
                 }
 
                 .side_area01 {
-                    .chart_box {
+                    .box_type04 {
                         &:nth-child(2) {
                             .chart_bar span.animation {
                                 @include nthFill("chartFill1", 60);
@@ -443,7 +454,7 @@
                     transition: background 500ms;
 
                     &:hover,
-                    &.checked_is {
+                    &.is_checked {
                         color: #ffffff;
                         background: #14bf98;
                     }
@@ -457,13 +468,31 @@
 
     .footer {
         .call {
-            padding: 90px 0 10px;
-            color: #ffffff;
             background: #153e52;
 
+            .inner {
+                padding: 90px 0 10px;
+                color: #ffffff;
+            }
+
             .box_type06 {
+                > p {
+                    margin: 0 0 10px;
+                }
+                .box_email {
+                    margin: 0 0 30px;
+                    font: 700 25px/1.1 "Montserrat", sans-serif;
+
+                    .fas {
+                        margin: 0 10px 0 0;
+                        color: #14bf98;
+                    }
+                }
+            }
+
+            .box_type07 {
                 justify-content: flex-start;
-                padding: 40px 0 15px;
+                padding: 0 0 15px;
 
                 .card {
                     & + .card {
@@ -484,6 +513,7 @@
     }
 
     .layer_wrap {
+        display: none;
         overflow-y: auto;
         position: fixed;
         top: 0;
@@ -493,40 +523,38 @@
         height: 100%;
 
         .layer {
+            display: none;
             position: absolute;
             top: 50%;
             left: 50%;
+            background: #ffffff;
             transform: translate(-50%, -50%);
         }
     }
 }
 
 @include media(1180px) {
-    .box {
+    .box_type {
         padding: 0 16px;
-
-        &.skill {
-            padding: 0;
-        }
     }
 
-    .wrap .section1 .about {
-        .additional_box {
+    .wrap .about {
+        .box_type01 {
             padding: 0 0 50px;
         }
 
-        .myself_box {
+        .box_type02 {
             flex-direction: column;
             padding: 40px 0;
 
-            .myself_txt {
+            .txt_myself {
                 width: 100%;
                 padding: 0;
 
-                .box_title {
+                .box_type00 {
                     padding: 20px 0 0;
 
-                    .title {
+                    .main_title {
                         padding: 0 0 5px;
                     }
                 }
@@ -536,33 +564,38 @@
 }
 
 @include media(768px) {
-    .wrap .section1 {
+    .wrap {
+        .box_type {
+            height: auto;
+        }
+
         .about {
-            .myself_box {
-                .myself_img {
+            .box_type02 {
+                .img_myself {
                     width: 100%;
                 }
             }
 
-            .additional_box {
+            .box_type01 {
                 flex-direction: column;
                 text-align: center;
             }
         }
 
         .skill {
-            padding: 0;
-
-            .area_box {
+            .box_type03 {
                 flex-direction: column;
+                padding: 0;
 
                 .area {
                     width: 100%;
                 }
-            }
 
-            .area_nav {
-                padding: 50px 0 0;
+                .area2 {
+                    .nav_area {
+                        padding: 50px 0 0;
+                    }
+                }
             }
         }
 

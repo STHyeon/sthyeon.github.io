@@ -450,7 +450,7 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .btn_swiper { color: #484a46; }
 
-.wrap { width: 100%; height: 100%; /** =========== 박스 ========== 0. box_type 공통 레이아웃 00. box_type00 공통 제목 01. box_type01 육각형 박스 02. box_type02 About 박스 03. box_type03 Skill 박스 04. box_type04 Chart 박스 05. box_type05 Project 박스 06. box_type06 Footer 박스 */ }
+.wrap { width: 100%; height: 100%; /** =========== 박스 ========== 0. box_type 공통 레이아웃 00. box_type00 공통 제목 01. box_type01 육각형 박스 02. box_type02 About 박스 03. box_type03 Skill 박스 04. box_type04 Chart 박스 05. box_type05 Project 박스 06. box_type06 Footer 박스 06. box_type07 Footer Card 박스 */ }
 
 .wrap * { font-family: "Open Sans"; }
 
@@ -464,7 +464,7 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .wrap .nav_box > ul li.active, .wrap .nav_box > ul li:hover { background-position: bottom; }
 
-.wrap .box_type { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; }
+.wrap .box_type { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; }
 
 .wrap .box_type00 .section_title { padding: 0 0 8px; font: 500 13px/1.1 "Montserrat", "sans-serif"; color: #14bf98; }
 
@@ -490,7 +490,7 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .wrap .about .box_type02 .txt_myself > p { margin: 0 0 16px; color: #787976; }
 
-.wrap .skill { background: #fbfbfb; }
+.wrap .skill { background: #f2f2f2; }
 
 .wrap .skill .box_type03 { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 110px 0; }
 
@@ -524,9 +524,13 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .wrap .skill .box_type03 .side_area_box .box_type04 .chart_bar span { display: block; height: 100%; background: -webkit-gradient(linear, left top, right bottom, from(#14bf98), to(#1bd1a7)); background: linear-gradient(to bottom right, #14bf98, #1bd1a7); }
 
-.wrap .skill .box_type03 .side_area_box .box_type04 .icon_skill { width: 60px; }
+.wrap .skill .box_type03 .side_area_box .box_type04 .box_image { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-.wrap .skill .box_type03 .side_area_box .side_area01 .chart_box:nth-child(2) .chart_bar span.animation { -webkit-animation: chartFill1 2s forwards; animation: chartFill1 2s forwards; }
+.wrap .skill .box_type03 .side_area_box .box_type04 .box_image .icon_skill { width: 40px; margin: 0 0 10px; }
+
+.wrap .skill .box_type03 .side_area_box .box_type04 .box_image .icon_skill + .icon_skill { margin: 0 0 10px 10px; }
+
+.wrap .skill .box_type03 .side_area_box .side_area01 .box_type04:nth-child(2) .chart_bar span.animation { -webkit-animation: chartFill1 2s forwards; animation: chartFill1 2s forwards; }
 
 @-webkit-keyframes chartFill1 { from { width: 0; }
   to { width: 60%; } }
@@ -534,7 +538,7 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 @keyframes chartFill1 { from { width: 0; }
   to { width: 60%; } }
 
-.wrap .skill .box_type03 .side_area_box .side_area01 .chart_box:nth-child(3) .chart_bar span.animation { -webkit-animation: chartFill2 2s forwards; animation: chartFill2 2s forwards; }
+.wrap .skill .box_type03 .side_area_box .side_area01 .box_type04:nth-child(3) .chart_bar span.animation { -webkit-animation: chartFill2 2s forwards; animation: chartFill2 2s forwards; }
 
 @-webkit-keyframes chartFill2 { from { width: 0; }
   to { width: 40%; } }
@@ -580,38 +584,45 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .wrap .project .nav_project ul li { padding: 5px 22px; font: 700 12px/1.1 "Montserrat", "sans-serif"; background: #f1f4f7; color: #7b7e85; cursor: pointer; -webkit-transition: background 500ms; transition: background 500ms; }
 
-.wrap .project .nav_project ul li:hover, .wrap .project .nav_project ul li.checked_is { color: #ffffff; background: #14bf98; }
+.wrap .project .nav_project ul li:hover, .wrap .project .nav_project ul li.is_checked { color: #ffffff; background: #14bf98; }
 
 .wrap .project .nav_project ul li + li { margin: 0 0 0 10px; }
 
-.wrap .footer .call { padding: 90px 0 10px; color: #ffffff; background: #153e52; }
+.wrap .footer .call { background: #153e52; }
 
-.wrap .footer .call .box_type06 { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; padding: 40px 0 15px; }
+.wrap .footer .call .inner { padding: 90px 0 10px; color: #ffffff; }
 
-.wrap .footer .call .box_type06 .card + .card { margin: 0 0 0 10px; }
+.wrap .footer .call .box_type06 > p { margin: 0 0 10px; }
 
-.wrap .footer .call .box_type06 .hexagon { width: 52px; height: 52px; }
+.wrap .footer .call .box_type06 .box_email { margin: 0 0 30px; font: 700 25px/1.1 "Montserrat", sans-serif; }
 
-.wrap .footer .call .box_type06 .hexagon .fab { font-size: 24px; }
+.wrap .footer .call .box_type06 .box_email .fas { margin: 0 10px 0 0; color: #14bf98; }
 
-.wrap .layer_wrap { overflow-y: auto; position: fixed; top: 0; left: 0; z-index: 1010; width: 100%; height: 100%; }
+.wrap .footer .call .box_type07 { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; padding: 0 0 15px; }
 
-.wrap .layer_wrap .layer { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.wrap .footer .call .box_type07 .card + .card { margin: 0 0 0 10px; }
 
-@media only screen and (max-width: 1180px) { .box { padding: 0 16px; }
-  .box.skill { padding: 0; }
-  .wrap .section1 .about .additional_box { padding: 0 0 50px; }
-  .wrap .section1 .about .myself_box { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding: 40px 0; }
-  .wrap .section1 .about .myself_box .myself_txt { width: 100%; padding: 0; }
-  .wrap .section1 .about .myself_box .myself_txt .box_title { padding: 20px 0 0; }
-  .wrap .section1 .about .myself_box .myself_txt .box_title .title { padding: 0 0 5px; } }
+.wrap .footer .call .box_type07 .hexagon { width: 52px; height: 52px; }
 
-@media only screen and (max-width: 768px) { .wrap .section1 .about .myself_box .myself_img { width: 100%; }
-  .wrap .section1 .about .additional_box { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-align: center; }
-  .wrap .section1 .skill { padding: 0; }
-  .wrap .section1 .skill .area_box { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
-  .wrap .section1 .skill .area_box .area { width: 100%; }
-  .wrap .section1 .skill .area_nav { padding: 50px 0 0; }
-  .wrap .section1 .project { padding: 60px 0 80px; } }
+.wrap .footer .call .box_type07 .hexagon .fab { font-size: 24px; }
+
+.wrap .layer_wrap { display: none; overflow-y: auto; position: fixed; top: 0; left: 0; z-index: 1010; width: 100%; height: 100%; }
+
+.wrap .layer_wrap .layer { display: none; position: absolute; top: 50%; left: 50%; background: #ffffff; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+@media only screen and (max-width: 1180px) { .box_type { padding: 0 16px; }
+  .wrap .about .box_type01 { padding: 0 0 50px; }
+  .wrap .about .box_type02 { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding: 40px 0; }
+  .wrap .about .box_type02 .txt_myself { width: 100%; padding: 0; }
+  .wrap .about .box_type02 .txt_myself .box_type00 { padding: 20px 0 0; }
+  .wrap .about .box_type02 .txt_myself .box_type00 .main_title { padding: 0 0 5px; } }
+
+@media only screen and (max-width: 768px) { .wrap .box_type { height: auto; }
+  .wrap .about .box_type02 .img_myself { width: 100%; }
+  .wrap .about .box_type01 { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-align: center; }
+  .wrap .skill .box_type03 { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding: 0; }
+  .wrap .skill .box_type03 .area { width: 100%; }
+  .wrap .skill .box_type03 .area2 .nav_area { padding: 50px 0 0; }
+  .wrap .project { padding: 60px 0 80px; } }
 
 @media only screen and (max-width: 520px) { .parallax-slider h2 { font-size: 60px; } }
