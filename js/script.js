@@ -79,11 +79,9 @@ $(function () {
     function SkillPercent() {
         var sct = $(window).scrollTop();
         var skill = $("#box_type01").offset().top;
-        console.log(skill);
 
         if (sct > skill) {
             $(".chart_bar span").addClass("animation"); // 한 번만
-            console.log("hie");
         } else {
             // $(".chart_bar span").removeClass("animation"); // 여러 번
         }

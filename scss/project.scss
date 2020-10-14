@@ -102,7 +102,7 @@
     .nav_box {
         z-index: 999;
         height: 55px;
-        background: #113448;
+        background: #010e39;
 
         > ul {
             height: 100%;
@@ -126,7 +126,7 @@
                 &.active,
                 &:hover {
                     background-position: bottom;
-                    // border-bottom: 5px solid #14bf98;
+                    // border-bottom: 5px solid #001b6c;
                 }
             }
         }
@@ -175,7 +175,7 @@
             width: 96px;
             height: 96px;
             margin: 0 auto 16px;
-            background: url(../img/hexagon-green.svg) center center no-repeat;
+            background: url(../img/icon_Hexagon.svg) center center no-repeat;
 
             i {
                 position: absolute;
@@ -268,11 +268,11 @@
                             transition: color 500ms;
 
                             &:hover {
-                                color: #14bf98;
+                                color: #001b6c;
                             }
 
                             &.active {
-                                color: #14bf98;
+                                color: #001b6c;
                             }
 
                             i {
@@ -314,7 +314,7 @@
                         span {
                             display: block;
                             height: 100%;
-                            background: linear-gradient(to bottom right, #14bf98, #1bd1a7);
+                            background: linear-gradient(to bottom right, #0f619b, #001b6c);
                         }
                     }
 
@@ -401,7 +401,7 @@
                     .fas {
                         font-size: 8px;
                         line-height: 20px;
-                        color: #14bf98;
+                        color: #001b6c;
                     }
 
                     li {
@@ -418,12 +418,13 @@
                 .btn_more {
                     width: 100%;
                     padding: 10px 0;
-                    border: 2px solid #14bf98;
-                    font: 400 20px/1.1 "Montserrat", "sans-serif";
+                    border: 2px solid #001b6c;
+                    font: 600 20px/1.1 "Montserrat", "sans-serif";
+                    color: #484a46;
 
                     &:hover {
                         color: #ffffff;
-                        background: #14bf98;
+                        background: #001b6c;
 
                         .fas {
                             animation: slideInLeft 1s infinite;
@@ -456,7 +457,7 @@
                     &:hover,
                     &.is_checked {
                         color: #ffffff;
-                        background: #14bf98;
+                        background: #001b6c;
                     }
                     & + li {
                         margin: 0 0 0 10px;
@@ -468,7 +469,7 @@
 
     .footer {
         .call {
-            background: #153e52;
+            background: #010e39;
 
             .inner {
                 padding: 90px 0 10px;
@@ -485,7 +486,7 @@
 
                     .fas {
                         margin: 0 10px 0 0;
-                        color: #14bf98;
+                        // color: #001b6c;
                     }
                 }
             }
@@ -564,6 +565,16 @@
 }
 
 @include media(768px) {
+    .swiper-container {
+        width: 80%;
+    }
+
+    .btn_swiper {
+        &::after {
+            font-size: 30px;
+        }
+    }
+
     .wrap {
         .box_type {
             height: auto;
@@ -579,6 +590,20 @@
             .box_type01 {
                 flex-direction: column;
                 text-align: center;
+
+                .card {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 0 20px;
+
+                    .hexagon {
+                        margin: 0 15px 0 0;
+                    }
+
+                    .card_title {
+                        margin: 0;
+                    }
+                }
             }
         }
 
@@ -589,9 +614,12 @@
 
                 .area {
                     width: 100%;
+                    height: 50%;
                 }
 
                 .area2 {
+                    padding: 0 35px 50px;
+
                     .nav_area {
                         padding: 50px 0 0;
                     }
@@ -602,11 +630,35 @@
         .project {
             padding: 60px 0 80px;
         }
+
+        .footer {
+            .call {
+                .inner {
+                    padding: 50px 0 10px;
+                }
+            }
+        }
     }
 }
 
 @include media(520px) {
     .parallax-slider h2 {
         font-size: 60px;
+    }
+}
+
+@include media(360px) {
+    .btn_swiper::after {
+        font-size: 20px;
+    }
+
+    .wrap {
+        .project {
+            .project_card {
+                .box_type06 {
+                    padding: 30px 20px;
+                }
+            }
+        }
     }
 }
