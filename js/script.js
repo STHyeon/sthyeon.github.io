@@ -1,41 +1,46 @@
 $(function () {
-    // swiper
-    new Swiper(".swiper-container", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20,
+    // slick
+    $(".slick-wrapper").slick({
+        // centerMode: true,
+        // centerPadding: 30,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: $(".btn_slick_prev"),
+        nextArrow: $(".btn_slick_next"),
+        responsive: [
+            // 반응형 웹 구현 옵션
+            {
+                breakpoint: 1100, //화면 사이즈 960px
+                settings: {
+                    //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                    slidesToShow: 2
+                }
             },
-            // when window width is >= 480px
-            630: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            // when window width is >= 640px
-            989: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-        },
+            {
+                breakpoint: 694, //화면 사이즈 768px
+                settings: {
+                    //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
-    // fixed header navigation bar
+    // parallax
+    function Parallax() {
+        var scrollPos = $(document).scrollTop();
+        var homePos = $("#home").height() / 2;
 
-    const header = document.querySelector(".nav_box");
-    const sticky = header.offsetTop - 70;
+        $("#home .home_title").css({
+            top: homePos + scrollPos + "px"
+        });
+    }
+
+    // fixed header navigation bar
+    var header = $(".nav_box");
+    var sticky = header.offset().top - 70;
 
     function navScroll() {
         if (window.pageYOffset > sticky) {
@@ -82,6 +87,8 @@ $(function () {
 
         if (sct > skill) {
             $(".chart_bar span").addClass("animation"); // 한 번만
+            $(".box_type04:nth-child(2) .chart_bar span").css("width", "60%"); // ie 9 때문에
+            $(".box_type04:nth-child(3) .chart_bar span").css("width", "40%"); // ie 9 때문에
         } else {
             // $(".chart_bar span").removeClass("animation"); // 여러 번
         }
@@ -133,9 +140,9 @@ $(function () {
 
         $("html, body").animate(
             {
-                scrollTop: $(element).offset().top,
+                scrollTop: $(element).offset().top
             },
-            800,
+            800
         );
     });
 
@@ -150,11 +157,12 @@ $(function () {
     $(window).on("scroll", function () {
         navScroll();
         CurrentScroll();
+        Parallax();
     });
 
     $(window).scroll(
         $.throttle(500, function () {
             SkillPercent();
-        }),
+        })
     );
 });

@@ -50,18 +50,58 @@
 
 @mixin nthFill($name, $width) {
     @include keyframes($name) {
-        from {
+        0% {
             width: 0;
         }
 
-        to {
+        100% {
             width: percentage($width/100);
         }
     }
 }
 
-.parallax-slider {
-    .title {
+.slick-slider {
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.slick-list {
+    margin: 0 -15px;
+}
+
+.slick-slide {
+    margin: 0 15px;
+}
+
+.btn_slick {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    color: #484a46;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &.btn_slick_prev {
+        left: 5px;
+    }
+
+    &.btn_slick_next {
+        right: 5px;
+    }
+}
+
+// ===================== libaray
+
+.home {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent url("../img/river.gif") center center no-repeat fixed;
+    background-size: cover;
+
+    .home_title {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -79,17 +119,6 @@
         opacity: 0.7;
     }
 }
-
-.swiper-container {
-    width: 90%;
-    padding: 10px 0;
-}
-
-.btn_swiper {
-    color: #484a46;
-}
-
-// ===================== libaray
 
 .wrap {
     width: 100%;
@@ -126,6 +155,7 @@
                 &.active,
                 &:hover {
                     background-position: bottom;
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#14bf98', endColorstr='#14bf98',GradientType=0 );
                     // border-bottom: 5px solid #001b6c;
                 }
             }
@@ -140,17 +170,20 @@
     02. box_type02 About 박스
     03. box_type03 Skill 박스
     04. box_type04 Chart 박스
-    05. box_type05 Project 박스
     06. box_type06 Footer 박스
-    06. box_type07 Footer Card 박스
+    067. box_type07 Footer Card 박스
+    05. box_type05 Project 박스
     */
 
     .box_type {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+        min-height: 100%;
+        height: auto;
+        margin: 0 auto;
+
+        .inner {
+            height: 100%;
+            padding: 55px 0 0;
+        }
     }
 
     .box_type00 {
@@ -167,9 +200,13 @@
     }
 
     .box_type01 {
-        display: flex;
-        justify-content: space-around;
         padding: 48px 0 46px;
+
+        .card {
+            float: left;
+            width: 33.33%;
+            text-align: center;
+        }
 
         .hexagon {
             width: 96px;
@@ -200,14 +237,13 @@
         }
     }
 
-    // .section {
-    //     height: 100%;
-    // }
-
     .about {
         .box_type02 {
-            display: flex;
             padding: 110px 0 48px;
+
+            .myself {
+                float: left;
+            }
 
             .img_myself {
                 width: 45%;
@@ -234,10 +270,10 @@
         background: #f2f2f2;
 
         .box_type03 {
-            display: flex;
             padding: 110px 0;
 
             .area {
+                float: left;
                 width: 50%;
                 height: 576px;
             }
@@ -258,14 +294,14 @@
                     padding: 110px 0 0;
 
                     ul {
-                        display: flex;
-                        justify-content: space-around;
-
                         .nav_link {
+                            float: left;
+                            width: 33.33%;
                             color: #c1cace;
                             font: 700 22px/1.1 "Montserrat", "sans-serif";
                             cursor: pointer;
                             transition: color 500ms;
+                            text-align: center;
 
                             &:hover {
                                 color: #001b6c;
@@ -313,15 +349,16 @@
 
                         span {
                             display: block;
+                            width: 0%;
                             height: 100%;
                             background: linear-gradient(to bottom right, #0f619b, #001b6c);
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f619b', endColorstr='#001b6c',GradientType=1 );
                         }
                     }
 
                     .box_image {
-                        display: flex;
-
                         .icon_skill {
+                            display: inline-block;
                             width: 40px;
                             margin: 0 0 10px;
 
@@ -335,18 +372,25 @@
                 .side_area01 {
                     .box_type04 {
                         &:nth-child(2) {
-                            .chart_bar span.animation {
-                                @include nthFill("chartFill1", 60);
+                            .chart_bar span {
                                 // width: 60%;
-                                animation: chartFill1 2s forwards;
+
+                                &.animation {
+                                    @include nthFill("chartFill1", 60);
+                                    animation: chartFill1 2s forwards;
+                                    // -webkit-animation: chartFill1 2s forwards;
+                                }
                             }
                         }
 
                         &:nth-child(3) {
-                            .chart_bar span.animation {
-                                @include nthFill("chartFill2", 40);
+                            .chart_bar span {
                                 // width: 60%;
-                                animation: chartFill2 2s forwards;
+
+                                &.animation {
+                                    @include nthFill("chartFill2", 40);
+                                    animation: chartFill2 2s forwards;
+                                }
                             }
                         }
                     }
@@ -357,6 +401,7 @@
 
     .project {
         .box_title {
+            padding: 50px 0 0;
             text-align: center;
         }
 
@@ -377,9 +422,9 @@
                     height: 100%;
                 }
             }
-
             .box_type06 {
                 height: 60%;
+
                 padding: 36px 40px;
                 text-align: center;
 
@@ -405,12 +450,17 @@
                     }
 
                     li {
-                        display: flex;
                         margin: 0 0 6px;
 
                         .point_info {
                             margin: 0 0 0 10px;
                             color: #787976;
+                        }
+
+                        .point_info,
+                        i {
+                            display: inline-block;
+                            vertical-align: middle;
                         }
                     }
                 }
@@ -442,11 +492,12 @@
             margin: 0 0 30px;
 
             ul {
-                display: flex;
-                justify-content: center;
                 margin: 0 auto;
+                font-size: 0;
+                text-align: center;
 
                 li {
+                    display: inline-block;
                     padding: 5px 22px;
                     font: 700 12px/1.1 "Montserrat", "sans-serif";
                     background: #f1f4f7;
@@ -471,11 +522,18 @@
         .call {
             background: #010e39;
 
+            &.box_type {
+                display: block;
+
+                .inner {
+                    display: block;
+                }
+            }
+
             .inner {
                 padding: 90px 0 10px;
                 color: #ffffff;
             }
-
             .box_type06 {
                 > p {
                     margin: 0 0 10px;
@@ -492,10 +550,11 @@
             }
 
             .box_type07 {
-                justify-content: flex-start;
                 padding: 0 0 15px;
 
                 .card {
+                    width: auto;
+
                     & + .card {
                         margin: 0 0 0 10px;
                     }
@@ -539,25 +598,34 @@
         padding: 0 16px;
     }
 
-    .wrap .about {
-        .box_type01 {
-            padding: 0 0 50px;
+    .wrap {
+        .about {
+            .box_type01 {
+                padding: 0 0 50px;
+            }
+
+            .box_type02 {
+                padding: 40px 0;
+
+                .txt_myself {
+                    width: 100%;
+                    padding: 0;
+
+                    .box_type00 {
+                        padding: 20px 0 0;
+
+                        .main_title {
+                            padding: 0 0 5px;
+                        }
+                    }
+                }
+            }
         }
 
-        .box_type02 {
-            flex-direction: column;
-            padding: 40px 0;
-
-            .txt_myself {
-                width: 100%;
-                padding: 0;
-
-                .box_type00 {
-                    padding: 20px 0 0;
-
-                    .main_title {
-                        padding: 0 0 5px;
-                    }
+        .project {
+            .project_card {
+                .box_type06 {
+                    padding: 30px 25px;
                 }
             }
         }
@@ -565,22 +633,14 @@
 }
 
 @include media(768px) {
-    .swiper-container {
-        width: 80%;
-    }
-
-    .btn_swiper {
-        &::after {
-            font-size: 30px;
-        }
-    }
-
     .wrap {
-        .box_type {
-            height: auto;
-        }
-
         .about {
+            height: auto;
+
+            .inner {
+                height: auto;
+            }
+
             .box_type02 {
                 .img_myself {
                     width: 100%;
@@ -588,20 +648,30 @@
             }
 
             .box_type01 {
-                flex-direction: column;
-                text-align: center;
-
                 .card {
-                    display: flex;
-                    align-items: center;
+                    width: 100%;
                     margin: 0 0 20px;
+                    text-align: left;
 
                     .hexagon {
-                        margin: 0 15px 0 0;
+                        width: 4rem;
+                        height: 4rem;
+                        margin: 0 2% 0 0;
+
+                        i {
+                            font-size: 2rem;
+                        }
                     }
 
                     .card_title {
                         margin: 0;
+                        text-align: left;
+                    }
+
+                    .hexagon,
+                    .card_body {
+                        display: inline-block;
+                        vertical-align: middle;
                     }
                 }
             }
@@ -609,7 +679,6 @@
 
         .skill {
             .box_type03 {
-                flex-direction: column;
                 padding: 0;
 
                 .area {
@@ -618,17 +687,17 @@
                 }
 
                 .area2 {
-                    padding: 0 35px 50px;
+                    padding: 0 16px 50px;
 
                     .nav_area {
-                        padding: 50px 0 0;
+                        padding: 35px 0 0;
                     }
                 }
             }
         }
 
         .project {
-            padding: 60px 0 80px;
+            // padding: 60px 0 80px;
         }
 
         .footer {
@@ -648,15 +717,15 @@
 }
 
 @include media(360px) {
-    .btn_swiper::after {
-        font-size: 20px;
-    }
+    // .btn_swiper::after {
+    //     font-size: 20px;
+    // }
 
     .wrap {
         .project {
-            .project_card {
-                .box_type06 {
-                    padding: 30px 20px;
+            .box_type06 {
+                padding: 30px 20px;
+                .project_card {
                 }
             }
         }
