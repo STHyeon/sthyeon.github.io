@@ -162,7 +162,7 @@ table { border-collapse: collapse; border-spacing: 0; }
     background-color: #000;
     opacity: 0.5;
     filter: alpha(opacity=70);
-    z-index: 1;
+    z-index: 1000;
 }
 
 .btn-disable {
