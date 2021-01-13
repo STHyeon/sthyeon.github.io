@@ -1,0 +1,50 @@
+.header-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 20px 0;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0px 1px 4px 0px grey;
+
+    &::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+
+    &__list {
+        float: left;
+        width: 80%;
+    }
+
+    &__reference {
+        float: left;
+        position: relative;
+        width: 20%;
+
+        &::before {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            content: '';
+            border-left: 1px solid #000;
+        }
+    }
+}
+
+.header-item {
+    float: left;
+    width: 25%;
+
+    &__name {
+        &:hover {
+            border-bottom: 2px solid;
+        }
+    }
+}
