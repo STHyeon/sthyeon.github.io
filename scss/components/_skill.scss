@@ -1,0 +1,86 @@
+.skill-list {
+    width: 100%;
+    border: 1px solid red;
+    font-size: 0;
+    text-align: justify;
+
+    &::after {
+        display: inline-block;
+        width: 100%;
+        content: '';
+    }
+
+    &__wrap {
+        display: inline-block;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        border: 1px solid;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    &__title {
+        padding: 0 0 20px;
+    }
+
+    &__description {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+
+        &:hover {
+            .description-wrap {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.skill-data {
+    &__wrap {
+        text-align: left;
+    }
+
+    &__item {
+        padding: 5px 0;
+
+        & + & {
+            border-top: 1px solid #000;
+        }
+    }
+}
+
+.description-wrap {
+    visibility: hidden;
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    max-width: 200px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    // background: rgba(255, 255, 255, 0.2);
+    background: red;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &::after {
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        content: '';
+        border-top: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid red;
+    }
+
+    &__contents {
+        margin: 0;
+    }
+}

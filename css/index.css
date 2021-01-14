@@ -49,12 +49,36 @@ a { color: inherit; cursor: pointer; text-decoration: none; }
 
 .project-controls__item + .project-controls__item { margin: 0 0 0 10px; }
 
-.project-list { font-size: 0; text-align: center; }
+.project-list { font-size: 0; text-align: left; }
 
 .project-list::after { display: block; content: ''; clear: both; }
 
-.project-list__wrap { display: inline-block; width: 30%; height: 320px; margin: 0 0 10px; border: 1px solid #000; font-size: 16px; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; }
-
-.project-list__wrap + .project-list__wrap { margin-left: 10px; }
+.project-list__wrap { display: inline-block; position: relative; width: calc((100% / 3) - 20px); height: 320px; margin: 10px; border: 1px solid #000; font-size: 16px; cursor: pointer; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; }
 
 .project-list__wrap:hover { background-color: rgba(0, 0, 0, 0.6); }
+
+.project-item__title { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.skill-list { width: 100%; border: 1px solid red; font-size: 0; text-align: justify; }
+
+.skill-list::after { display: inline-block; width: 100%; content: ''; }
+
+.skill-list__wrap { display: inline-block; position: relative; width: 300px; height: 300px; padding: 20px; border: 1px solid; font-size: 16px; text-align: center; }
+
+.skill-list__title { padding: 0 0 20px; }
+
+.skill-list__description { position: absolute; top: 20px; right: 20px; width: 20px; height: 20px; }
+
+.skill-list__description:hover .description-wrap { visibility: visible; opacity: 1; }
+
+.skill-data__wrap { text-align: left; }
+
+.skill-data__item { padding: 5px 0; }
+
+.skill-data__item + .skill-data__item { border-top: 1px solid #000; }
+
+.description-wrap { visibility: hidden; position: absolute; top: 30px; left: -10px; max-width: 200px; padding: 5px 10px; border-radius: 5px; background: red; text-align: left; opacity: 0; -webkit-transition: opacity 0.5s; transition: opacity 0.5s; }
+
+.description-wrap::after { position: absolute; top: -20px; left: 10px; content: ''; border-top: 10px solid transparent; border-right: 10px solid transparent; border-left: 10px solid transparent; border-bottom: 10px solid red; }
+
+.description-wrap__contents { margin: 0; }
