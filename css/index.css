@@ -82,3 +82,9 @@ a { color: inherit; cursor: pointer; text-decoration: none; }
 .description-wrap::after { position: absolute; top: -20px; left: 10px; content: ''; border-top: 10px solid transparent; border-right: 10px solid transparent; border-left: 10px solid transparent; border-bottom: 10px solid red; }
 
 .description-wrap__contents { margin: 0; }
+
+.about-list { max-width: 600px; width: 100%; margin: 0 auto; }
+
+.about-item { position: relative; padding: 0 0 0 10px; }
+
+.about-item::before { position: absolute; top: 6px; left: 0; content: ''; width: 6px; height: 6px; border-radius: 5px; background: #666; }

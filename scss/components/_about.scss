@@ -1,0 +1,26 @@
+.about-list {
+    // text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-item {
+    position: relative;
+    padding: 0 0 0 10px;
+
+    &::before {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 5px;
+        background: #666;
+    }
+
+    // &__title {
+    //     text-align: left;
+    // }
+}
