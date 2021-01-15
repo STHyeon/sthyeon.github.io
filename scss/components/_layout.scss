@@ -1,0 +1,118 @@
+.layer {
+    &__background {
+        display: none;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    &__wrap {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 110;
+        max-width: 700px;
+        width: 90%;
+        background: #ffffff;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.layer-slide {
+    position: relative;
+
+    &__item {
+        max-height: 400px;
+    }
+
+    &__item {
+        img {
+            width: 100%;
+            max-height: inherit;
+            height: 100%;
+        }
+    }
+}
+
+.layer-arrow {
+    &__wrap {
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        width: 100%;
+        font-size: 0;
+        text-align: justify;
+
+        &::after {
+            display: inline-block;
+            width: 100%;
+            content: '';
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        width: 53px;
+        height: 53px;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
+}
+
+.layer-description {
+    padding: 35px 25px 120px;
+    border-top: 3px solid #1b242f;
+    color: #444444;
+
+    &__title {
+        padding: 0 0 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 29px;
+        line-height: 29px;
+    }
+
+    &__content {
+        padding: 15px 0 0;
+        line-height: 24px;
+    }
+}
+
+.layer-close {
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    right: 25px;
+
+    &::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+
+    &__button {
+        float: left;
+        padding: 11px 30px;
+        background: #001b6c;
+        color: #ffffff;
+
+        & + & {
+            margin: 0 0 0 10px;
+        }
+    }
+}
+
+.curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}

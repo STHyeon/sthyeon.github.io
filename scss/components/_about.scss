@@ -1,7 +1,31 @@
+#about > .container__inner {
+    &::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+.about-intro {
+    float: left;
+    width: 30%;
+    text-align: center;
+
+    &__txt {
+        margin: 1em 1em 1em 0;
+        font-size: 42px;
+        line-height: 1.5;
+    }
+
+    &__icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 .about-list {
-    // text-align: center;
-    max-width: 600px;
-    width: 100%;
+    float: left;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -20,7 +44,16 @@
         background: #666;
     }
 
-    // &__title {
-    //     text-align: left;
-    // }
+    & + & {
+        margin: 30px 0 0;
+    }
+
+    &__title {
+        font-weight: bold;
+        margin: 0 0 8px;
+    }
+
+    &__content {
+        word-break: break-all;
+    }
 }
