@@ -12,6 +12,10 @@
         <!-- MixItUP -->
         <script src="../js/lib/mixitup.js"></script>
 
+        <!-- slick -->
+        <link rel="stylesheet" href="../css/lib/slick.css" />
+        <script src="../js/lib/slick.min.js"></script>
+
         <script src="../js/index.js"></script>
 
         <link rel="stylesheet" href="//cdn.banksalad.com/fonts/noto/NotoSansKR.css" />
@@ -27,13 +31,13 @@
                         <a href="#home" class="header-item__name">Home</a>
                     </li>
                     <li class="header-item">
-                        <a href="#home" class="header-item__name">Home</a>
+                        <a href="#about" class="header-item__name">Home</a>
+                    </li>
+                    <li class="header-item">
+                        <a href="#skill" class="header-item__name">Home</a>
                     </li>
                     <li class="header-item">
                         <a href="#project" class="header-item__name">Home</a>
-                    </li>
-                    <li class="header-item">
-                        <a href="#home" class="header-item__name">Home</a>
                     </li>
                 </ul>
                 <div class="header-list__reference">
@@ -41,71 +45,87 @@
                 </div>
             </header> -->
 
-            <section id="home" class="container">
-                <div class="container__title">A Type</div>
-                <ul class="about-list">
-                    <li class="about-item">
-                        <div class="about-item__title">Title</div>
-                        <div class="about-item__content">abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc아</div>
-                    </li>
-                    <li class="about-item">
-                        <div class="about-item__title">Title</div>
-                        <div class="about-item__content">abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc아</div>
-                    </li>
-                    <li class="about-item">
-                        <div class="about-item__title">Title</div>
-                        <div class="about-item__content">abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc아</div>
-                    </li>
-                </ul>
-            </section>
+            <!-- <section id="home" class="container">ddddddd</section> -->
 
-            <!-- <section id="#home" class="container">
-                <div class="container__title">A Type</div>
-                <div class="skill-list">
-                    <div class="skill-list__wrap">
-                        <div class="skill-list__title">aaaa</div>
-                        <ul class="skill-data__wrap">
-                            <li class="skill-data__item">a</li>
-                            <li class="skill-data__item">b</li>
-                        </ul>
-                        <div class="skill-list__description">
-                            <img src="../img/information.svg" alt="question icon" />
+            <!-- <section id="about" class="container">
+                <div class="container__inner">
+                    <div class="container__title">A Type</div>
+                    <div class="about-intro">
+                    <p class="about-intro__txt">
+                        글자글자글자글자글자글자<br />
+                        글s자글자<img src="../img/four-icon.svg" alt="icon" class="about-intro__icon" />글자글자글자글자<br />
+                    </p>
+                </div>
+                    <ul class="about-list">
+                        <li class="about-item">
+                            <div class="about-item__title">Title</div>
+                            <div class="about-item__content">abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc아</div>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-item__title">Title</div>
+                            <div class="about-item__content">abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc아</div>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-item__title">Title</div>
+                            <div class="about-item__content">abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc아</div>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-item__title">Title</div>
+                            <div class="about-item__content">abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc아</div>
+                        </li>
+                    </ul>
+                </div>
+            </section> -->
 
-                            <div class="description-wrap">
-                                <div class="description-wrap__title">message title</div>
-                                <p class="description-wrap__contents">aaaaaaaaaaaaa</p>
+            <!-- <section id="skill" class="container">
+                <div class="container__inner">
+                    <div class="container__title">A Type</div>
+                    <div class="skill-list">
+                        <div class="skill-list__wrap">
+                            <div class="skill-list__title">aaaa</div>
+                            <ul class="skill-data__wrap">
+                                <li class="skill-data__item">a</li>
+                                <li class="skill-data__item">b</li>
+                            </ul>
+                            <div class="skill-list__description">
+                                <img src="../img/information.svg" alt="question icon" />
+
+                                <div class="description-wrap">
+                                    <div class="description-wrap__title">message title</div>
+                                    <p class="description-wrap__contents">aaaaaaaaaaaaa</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="skill-list__wrap">
-                        <div class="skill-list__title">aaaa</div>
-                        <ul class="skill-data__wrap">
-                            <li class="skill-data__item">a</li>
-                            <li class="skill-data__item">b</li>
-                        </ul>
-                        <div class="skill-list__description">
-                            <img src="../img/information.svg" alt="question icon" />
+                        <div class="skill-list__wrap">
+                            <div class="skill-list__title">aaaa</div>
+                            <ul class="skill-data__wrap">
+                                <li class="skill-data__item">a</li>
+                                <li class="skill-data__item">b</li>
+                            </ul>
+                            <div class="skill-list__description">
+                                <img src="../img/information.svg" alt="question icon" />
 
-                            <div class="description-wrap">
-                                <div class="description-wrap__title">message title</div>
-                                <p class="description-wrap__contents">aaaaaaaaaaaaa</p>
+                                <div class="description-wrap">
+                                    <div class="description-wrap__title">message title</div>
+                                    <p class="description-wrap__contents">aaaaaaaaaaaaa</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="skill-list__wrap">
-                        <div class="skill-list__title">aaaa</div>
-                        <ul class="skill-data__wrap">
-                            <li class="skill-data__item">a</li>
-                            <li class="skill-data__item">b</li>
-                        </ul>
-                        <div class="skill-list__description">
-                            <img src="../img/information.svg" alt="question icon" />
+                        <div class="skill-list__wrap">
+                            <div class="skill-list__title">aaaa</div>
+                            <ul class="skill-data__wrap">
+                                <li class="skill-data__item">a</li>
+                                <li class="skill-data__item">b</li>
+                            </ul>
+                            <div class="skill-list__description">
+                                <img src="../img/information.svg" alt="question icon" />
 
-                            <div class="description-wrap">
-                                <div class="description-wrap__title">message title</div>
-                                <p class="description-wrap__contents">aaaaaaaaaaaaa</p>
+                                <div class="description-wrap">
+                                    <div class="description-wrap__title">message title</div>
+                                    <p class="description-wrap__contents">aaaaaaaaaaaaa</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -113,32 +133,62 @@
             </section> -->
 
             <!-- <section id="project" class="container">
-                <div class="container__title">B Type</div>
-                <ul class="project-controls">
-                    <li class="project-controls__item" data-filter="all">All</li>
-                    <li class="project-controls__item" data-filter=".web-design">A</li>
-                    <li class="project-controls__item" data-filter=".ux-design">B</li>
-                    <li class="project-controls__item" data-filter=".a-design">C</li>
-                </ul>
+                <div class="container__inner">
+                    <div class="container__title">B Type</div>
+                    <ul class="project-controls">
+                        <li class="project-controls__item" data-filter="all">All</li>
+                        <li class="project-controls__item" data-filter=".web-design">A</li>
+                        <li class="project-controls__item" data-filter=".ux-design">B</li>
+                        <li class="project-controls__item" data-filter=".a-design">C</li>
+                    </ul>
 
-                <ul class="project-list">
-                    <li class="mix project-list__wrap web-design">
-                        <div class="project-item__title">TItle</div>
-                    </li>
+                    <ul class="project-list">
+                        <li class="mix project-list__wrap web-design openlayer">
+                            <div class="project-item__title">TItle</div>
+                        </li>
 
-                    <li class="mix project-list__wrap ux-design">
-                        <div class="project-item__title">TItle</div>
-                    </li>
+                        <li class="mix project-list__wrap ux-design">
+                            <div class="project-item__title">TItle</div>
+                        </li>
 
-                    <li class="mix project-list__wrap ux-design">
-                        <div class="project-item__title">TItle</div>
-                    </li>
+                        <li class="mix project-list__wrap ux-design">
+                            <div class="project-item__title">TItle</div>
+                        </li>
 
-                    <li class="mix project-list__wrap ux-design">
-                        <div class="project-item__title">TItle</div>
-                    </li>
-                </ul>
+                        <li class="mix project-list__wrap ux-design">
+                            <div class="project-item__title">TItle</div>
+                        </li>
+                    </ul>
+                </div>
             </section> -->
+
+            <section id="contact" class="container">
+                <div class="container__inner">aaaaaa</div>
+            </section>
+        </div>
+
+        <div class="layer__background">
+            <div id="layer_portfolio" class="layer__wrap">
+                <div class="layer-slide">
+                    <ul class="layer-slide__wrap">
+                        <li class="layer-slide__item"><img src="/img/details-1-background.jpg" alt="" /></li>
+                        <li class="layer-slide__item"><img src="/img/pen.jpg" alt="" /></li>
+                    </ul>
+                    <div class="layer-arrow__wrap">
+                        <img src="../img/right-arrow.svg" alt="" id="layer_prev" class="layer-arrow__item" />
+                        <img src="../img/right-arrow.svg" alt="" id="layer_next" class="layer-arrow__item" />
+                    </div>
+                </div>
+                <div class="layer-description">
+                    <div class="layer-description__title">제목</div>
+                    <div class="layer-description__content">ChowNow is a commission-free online ordering system and food ordering app helping restaurants feed their hungry customers.</div>
+                    <div class="layer-close">
+                        <button type="button" class="layer-close__button">View</button>
+                        <button type="button" class="layer-close__button closelayer">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="curtain"></div>
         </div>
     </body>
 </html>
