@@ -4,7 +4,6 @@
 
 .skill-list {
     width: 100%;
-    border: 1px solid red;
     font-size: 0;
     text-align: justify;
 
@@ -16,13 +15,15 @@
 
     &__wrap {
         display: inline-block;
+        vertical-align: middle;
         position: relative;
-        width: 300px;
+        width: 240px;
         height: 300px;
         padding: 20px;
-        border: 1px solid;
         font-size: 16px;
         text-align: center;
+        background: #ffffff;
+        box-shadow: 4px 4px 10px -8px;
     }
 
     &__title {
@@ -37,7 +38,7 @@
         height: 20px;
 
         &:hover {
-            .description-wrap {
+            & + .description-wrap {
                 visibility: visible;
                 opacity: 1;
             }
@@ -51,10 +52,14 @@
     }
 
     &__item {
-        padding: 5px 0;
+        padding: 10px 0;
 
         & + & {
-            border-top: 1px solid #000;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        & > img {
+            vertical-align: sub;
         }
     }
 }
@@ -62,13 +67,14 @@
 .description-wrap {
     visibility: hidden;
     position: absolute;
-    top: 30px;
-    left: -10px;
+    top: 51px;
+    right: 10px;
+    z-index: 10;
     max-width: 200px;
     padding: 5px 10px;
     border-radius: 5px;
-    // background: rgba(255, 255, 255, 0.2);
-    background: red;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
     text-align: left;
     opacity: 0;
     transition: opacity 0.5s;
@@ -76,15 +82,23 @@
     &::after {
         position: absolute;
         top: -20px;
-        left: 10px;
+        right: 10px;
         content: '';
         border-top: 10px solid transparent;
         border-right: 10px solid transparent;
         border-left: 10px solid transparent;
-        border-bottom: 10px solid red;
+        border-bottom: 10px solid rgba(0, 0, 0, 0.6);
     }
+}
 
-    &__contents {
-        margin: 0;
+@media only screen and (max-width: 767px) {
+    .skill-list {
+        &__wrap {
+            width: 100%;
+
+            & + & {
+                margin: 10px 0 0;
+            }
+        }
     }
 }

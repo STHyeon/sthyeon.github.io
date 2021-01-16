@@ -18,33 +18,42 @@
 
     &__list {
         float: left;
-        width: 80%;
-    }
-
-    &__reference {
-        float: left;
-        position: relative;
-        width: 20%;
-
-        &::before {
-            display: inline-block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            content: '';
-            border-left: 1px solid #000;
-        }
+        width: 100%;
     }
 }
 
 .header-item {
     float: left;
-    width: 25%;
+    width: 20%;
+
+    a {
+        &.pc {
+            display: inline-block !important;
+        }
+    }
 
     &__name {
         &:hover {
             border-bottom: 2px solid;
+        }
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header-item {
+        a {
+            &.pc {
+                display: none !important;
+            }
+
+            &.mobile {
+                display: inline-block !important;
+            }
         }
     }
 }

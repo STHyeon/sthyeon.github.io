@@ -1,0 +1,49 @@
+.info-call {
+    margin: 0 0 50px;
+    text-align: center;
+}
+
+.info-list {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+
+    &::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+
+    &__item {
+        display: inline-block;
+        width: 200px;
+        padding: 76px 0;
+        border: 1px solid #000;
+        border-radius: 50%;
+        font-size: 16px;
+
+        span {
+            display: block;
+            margin: 0 0 10px;
+        }
+
+        & + & {
+            margin: 0 0 0 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .info-list {
+        &__item {
+            display: block;
+            margin: 0 auto;
+
+            & + & {
+                margin: 10px auto 0;
+            }
+        }
+    }
+}

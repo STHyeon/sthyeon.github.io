@@ -13,6 +13,7 @@
     &__item {
         display: inline-block;
         width: 20%;
+        padding: 5px 0;
         border: 1px solid;
         font-size: 16px;
         text-align: center;
@@ -57,5 +58,35 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .project-list {
+        &__wrap {
+            width: calc((100% / 2) - 20px);
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .project-controls {
+        &__item {
+            width: calc(50% - 10px);
+
+            & + & {
+                margin: 0 0 10px 10px;
+            }
+
+            &:nth-child(3) {
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+
+    .project-list {
+        &__wrap {
+            width: calc(100% - 20px);
+        }
     }
 }
