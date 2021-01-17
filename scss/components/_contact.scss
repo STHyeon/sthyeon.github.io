@@ -1,3 +1,7 @@
+#contact {
+    background: #f1f1f1;
+}
+
 .info-call {
     margin: 0 0 50px;
     text-align: center;
@@ -27,6 +31,14 @@
         span {
             display: block;
             margin: 0 0 10px;
+        }
+
+        a {
+            font-size: 13px;
+
+            &:hover {
+                color: blue;
+            }
         }
 
         & + & {

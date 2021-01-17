@@ -1,0 +1,27 @@
+[
+    {
+        "id": "dabang",
+        "name": "다방",
+        "title": "Write",
+        "image": ["a.jpg", "b.jpg"],
+        "description": "aaaaaaaaaaaa",
+        "built": ["abc", "bcv"]
+    },
+    {
+        "id": "writeroad",
+        "name": "Write Road",
+        "title": "Write",
+        "image": ["a.jpg", "b.jpg"],
+        "description": "자신이 원하는 글귀를 배경사진으로 하고 싶지만 찾기 힘들 때, 직접 만들어서 사용하고 공유할 수 있는 사이트입니다. <br /><br /><b>html2canvas</b>를 이용하여 글과 사진을 하나의 png 파일로 만듭니다. <br /><br />이 프로젝트는 한세톤 - 주제 '#'으로 태그와 연관지어 만들었습니다. 이 해커톤에서는 퍼블리셔로 참여했었고, 따로 <b>React</b>와 <b>Node.js</b>로 재구성해보았습니다.",
+        "built": ["React", "Redux","SCSS", "Node.js", "MongoDB"]
+    },
+    {
+        "id": "srello",
+        "name": "Srello",
+        "title": "Write",
+        "image": ["a.jpg", "b.jpg"],
+        "description": "aaaaaaaaaaaa",
+        "built": ["abc", "bcv"]
+    }
+    
+]

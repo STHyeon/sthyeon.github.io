@@ -16,6 +16,27 @@ function openLayer() {
         $('.layer__background').append("<div class='curtain'></div>");
         $('.layer__background').show();
         $('.layer__wrap').hide();
+
+        var data_call_id = $(this).attr('id');
+        $.getJSON('../data/data.json', function (data) {
+            var dataInfo = data.find((e) => e.id == data_call_id);
+            $('.layer-description__title').text(dataInfo.name);
+            $('.layer-description__content').html(dataInfo.description);
+            if (dataInfo.built) {
+                console.log(dataInfo.built);
+                var liHtml = '';
+                liHtml += '<ul>';
+                for (var i of dataInfo.built) {
+                    liHtml += '<li>' + i + '</li>';
+                }
+                liHtml += '</ul>';
+
+                console.log(liHtml);
+
+                $('.layer-description__content').append(liHtml);
+            }
+        });
+
         $('#layer_portfolio').fadeIn();
 
         $('.closelayer, .curtain').on('click', function () {
