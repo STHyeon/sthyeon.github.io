@@ -1,207 +1,267 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
         <!-- jQuery -->
         <script src="../js/lib/jquery-3.5.1.min.js"></script>
-        <script src="../js/lib/jquery.ba-throttle-debounce.js"></script>
-
-        <!-- Slick -->
-        <link rel="stylesheet" href="../css/lib/slick.css" />
-        <script src="../js/lib/slick.min.js"></script>
-
-        <!-- Animate -->
-        <link rel="stylesheet" href="../css/lib/animate.min.css" />
-
-        <!-- Aos -->
-        <link rel="stylesheet" href="../css/lib/aos.css" />
-        <script src="../js/lib/aos.js"></script>
 
         <!-- MixItUP -->
         <script src="../js/lib/mixitup.js"></script>
 
-        <link rel="stylesheet" href="../css/reset.css" />
-        <link rel="stylesheet" href="../css/project.css" />
+        <!-- slick -->
+        <link rel="stylesheet" href="../css/lib/slick.css" />
+        <script src="../js/lib/slick.min.js"></script>
 
         <script src="../js/index.js"></script>
 
-        <!-- FontAwesome -->
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-            integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-            crossorigin="anonymous"
-        />
+        <link rel="stylesheet" href="//cdn.banksalad.com/fonts/noto/NotoSansKR.css" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
+        <link rel="stylesheet" href="../css/index.css" />
     </head>
     <body>
-        <!-- https://codepen.io/designbyremedy/pen/aqjLx -->
-        <div id="wrap">
-            <header>
-                <div class="header">
-                    <h2 class="header__title">Hello</h2>
-                    <nav>
-                        <ul class="header__list">
-                            <li class="header__list--item"><a href="#About">waaa</a></li>
-                            <li class="header__list--item"><a href="#Skill">waaa</a></li>
-                            <li class="header__list--item"><a href="#Project">waaa</a></li>
-                            <li class="header__list--item"><a href="#Call">waaa</a></li>
-                        </ul>
-                    </nav>
-                </div>
+        <!-- design https://portfolio.junhobaik.synology.me/#project -->
+        <div class="wrap">
+            <header class="header-list">
+                <ul class="header-list__list">
+                    <li class="header-item">
+                        <a href="#home" class="header-item__name pc">Home</a>
+                        <a href="#home" class="header-item__name mobile">
+                            <img src="../img/header/home.svg" alt="header_home" />
+                        </a>
+                    </li>
+                    <li class="header-item">
+                        <a href="#about" class="header-item__name pc">About</a>
+                        <a href="#about" class="header-item__name mobile">
+                            <img src="../img/header/about.svg" alt="header_about" />
+                        </a>
+                    </li>
+                    <li class="header-item">
+                        <a href="#skill" class="header-item__name pc">Skill</a>
+                        <a href="#skill" class="header-item__name mobile">
+                            <img src="../img/header/pencil.svg" alt="header_skill" />
+                        </a>
+                    </li>
+                    <li class="header-item">
+                        <a href="#project" class="header-item__name pc">Project</a>
+                        <a href="#project" class="header-item__name mobile">
+                            <img src="../img/header/briefing.svg" alt="header_project" />
+                        </a>
+                    </li>
+                    <li class="header-item">
+                        <a href="#contact" class="header-item__name pc">Contact</a>
+                        <a href="#contact" class="header-item__name mobile">
+                            <img src="../img/header/contact.svg" alt="header_contact" />
+                        </a>
+                    </li>
+                </ul>
             </header>
 
-            <section id="About">
-                <div class="parallax__item--one">
-                    <h3>SOUTHERN CALIFORNIA</h3>
-                </div>
+            <section id="home" class="container">
+                <p class="main__title">안녕하세요.<br /><span>프론트엔드 개발자</span>를 꿈꾸는<br />송태현입니다!</p>
+            </section>
 
-                <div class="block block__about">
-                    <div class="block__about--avatar">
-                        <img src="../img/mountain.jpg" alt="avatar" />
+            <section id="about" class="container">
+                <div class="container__inner">
+                    <div class="container__title">About</div>
+                    <div class="about-intro">
+                        <p class="about-intro__txt">
+                            저의 <img src="../img/etc/four-icon.svg" alt="icon" class="about-intro__icon" />가지를<br />
+                            소개합니다!<br />
+                        </p>
                     </div>
-                    <p class="block__about--txt">
-                        모든 국민은 학문과 예술의 자유를 가진다. 행정권은 대통령을 수반으로 하는 정부에 속한다. 근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다. 모든 국민은 주거의 자유를
-                        침해받지 아니한다. 주거에 대한 압수나 수색을 할 때에는 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 국무위원은 국정에 관하여 대통령을 보좌하며, 국무회의의
-                        구성원으로서 국정을 심의한다. 법률이 헌법에 위반되는 여부가 재판의 전제가 된 경우에는 법원은 헌법재판소에 제청하여 그 심판에 의하여 재판한다. 재산권의 행사는 공공복리에
-                        적합하도록 하여야 한다. 대통령의 임기연장 또는 중임변경을 위한 헌법개정은 그 헌법개정 제안 당시의 대통령에 대하여는 효력이 없다. 국정의 중요한 사항에 관한 대통령의 자문에
-                        응하기 위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다. 국회는 헌법개정안이 공고된 날로부터 60일 이내에 의결하여야 하며, 국회의 의결은 재적의원 3분의 2 이상의 찬성을
-                        얻어야 한다. 헌법개정안은 국회가 의결한 후 30일 이내에 국민투표에 붙여 국회의원선거권자 과반수의 투표와 투표자 과반수의 찬성을 얻어야 한다. 공공필요에 의한 재산권의 수용·사용
-                        또는 제한 및 그에 대한 보상은 법률로써 하되, 정당한 보상을 지급하여야 한다. 법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권은 법률이 정하는 바에 의하여 이를
-                        제한하거나 인정하지 아니할 수 있다.
-                    </p>
+                    <ul class="about-list">
+                        <li class="about-item">
+                            <div class="about-item__title">UI Development</div>
+                            <p class="about-item__content">
+                                웹표준성, 웹접근성에 알맞게 코드를 작성할 수 있고,<br />
+                                크로스브라우징을 하여 사용자가 웹페이지를 동등하게 이용할 수 있게 제작할 수 있습니다.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-item__title">Co-Work</div>
+                            <p class="about-item__content">디자이너와 개발자와 가깝게 일하며 둘 사이에서 연결 다리 역할을 하며 디자인의 의도를 파악하며 항상 좋은 결과를 만들어 냅니다.</p>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-item__title">Evolution</div>
+                            <div class="about-item__content">현재 실력에서 멈춰있는 것이 아닌, 새로운 기술에 지속적인 관심을 가지고 배웁니다.</div>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-item__title">Figure out</div>
+                            <div class="about-item__content">해당 기능을 구현하기 위해 끊임없이 노력합니다</div>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
-            <section id="Skill">
-                <div class="parallax__item--two">
-                    <h3 data-aos="fade-left">NEW YORK</h3>
-                </div>
+            <section id="skill" class="container">
+                <div class="container__inner">
+                    <div class="container__title">Skill</div>
+                    <div class="skill-list">
+                        <div class="skill-list__wrap">
+                            <div class="skill-list__title">Hard Skills</div>
+                            <ul class="skill-data__wrap">
+                                <li class="skill-data__item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5" width="20" height="20" />
+                                    HTML5
+                                </li>
+                                <li class="skill-data__item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css3" width="20" height="20" />
+                                    CSS3
+                                </li>
+                                <li class="skill-data__item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="20" height="20" />
+                                    SCSS
+                                </li>
+                                <li class="skill-data__item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="20" height="20" />
+                                    JavaScript
+                                </li>
+                                <li class="skill-data__item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="react" width="20" height="20" />
+                                    React
+                                </li>
+                            </ul>
 
-                <div class="block block_skill">
-                    <p>
-                        reaking into the New York fashion world is no easy task. But by the early 2000's, UGG Australia began to take it by storm. The evolution of UGG from a brand that made sheepskin
-                        boots, slippers, clogs and sandals for an active, outdoor lifestyle to a brand that was now being touted as a symbol of a stylish, casual and luxurious lifestyle was swift.
-                        Much of this was due to a brand repositioning effort that transformed UGG into a high-end luxury footwear maker. As a fashion brand, UGG advertisements now graced the pages of
-                        Vogue Magazine as well as other fashion books. In the mid 2000's, the desire for premium casual fashion was popping up all over the world and UGG was now perfectly aligned with
-                        this movement.
-                    </p>
-                    <p>
-                        Fueled by celebrities from coast to coast wearing UGG boots and slippers on their downtime, an entirely new era of fashion was carved out. As a result, the desire and love for
-                        UGG increased as people wanted to go deeper into this relaxed UGG experience. UGG began offering numerous color and style variations on their sheepskin boots and slippers. Cold
-                        weather boots for women and men and leather casuals were added with great success. What started as a niche item, UGG sheepskin boots were now a must-have staple in everyone's
-                        wardrobe. More UGG collections followed, showcasing everything from knit boots to sneakers to wedges, all the while taining that luxurious feel UGG is known for all over the
-                        world. UGG products were now seen on runways and in fashion shoots from coast to coast. Before long, the love spread even further.
-                    </p>
+                            <div class="skill-list__description">
+                                <img src="../img/etc/information.svg" alt="question icon" />
+                            </div>
+                            <div class="description-wrap">
+                                <p class="description-wrap__contents">평소 자주 사용하는 기술</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-list__wrap">
+                            <div class="skill-list__title">Soft Skills</div>
+                            <ul class="skill-data__wrap">
+                                <li class="skill-data__item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="20" height="20" />
+                                    Redux
+                                </li>
+                                <li class="skill-data__item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="nodejs" width="20" height="20" />
+                                    Node.js
+                                </li>
+                                <li class="skill-data__item">
+                                    <img src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" alt="graphql" width="20" height="20" />
+                                    GraphQL
+                                </li>
+                                <li class="skill-data__item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="20" height="20" />
+                                    PhotoShop
+                                </li>
+                                <li class="skill-data__item">
+                                    <img src="../img/skill/icon_zeplin.svg" alt="zeplin" width="20" height="20" />
+                                    Zeplin
+                                </li>
+                            </ul>
+
+                            <div class="skill-list__description">
+                                <img src="../img/etc/information.svg" alt="question icon" />
+                            </div>
+                            <div class="description-wrap">
+                                <p class="description-wrap__contents">몇 번 사용해본 기술이지만, 익숙하지 않은 기술</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-list__wrap">
+                            <div class="skill-list__title">Studying Skills</div>
+                            <ul class="skill-data__wrap">
+                                <li class="skill-data__item">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="20" height="20" />
+                                    TypeScript
+                                </li>
+                                <li class="skill-data__item">
+                                    <img src="../img/skill/icon_storybook.svg" alt="storybook" width="20px" height="20px" />
+                                    Storybook
+                                </li>
+                            </ul>
+
+                            <div class="skill-list__description">
+                                <img src="../img/etc/information.svg" alt="question icon" />
+                            </div>
+                            <div class="description-wrap">
+                                <p class="description-wrap__contents">요즘 공부하고 있는 기술</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- mixItUp js 사용 -->
-            <section id="Project">
-                <div class="parallax__item--three">
-                    <h3 data-aos="fade-right">ENCHANTED FOREST</h3>
-                </div>
-            </section>
-
-            <section>
-                <div class="block">
+            <section id="project" class="container">
+                <div class="container__inner">
+                    <div class="container__title">Project</div>
                     <ul class="project-controls">
-                        <li class="project-controls__item filter active" data-filter="all">Show All</li>
-                        <li class="project-controls__item" data-filter=".web-design">Web Design</li>
-                        <li class="project-controls__item" data-filter=".ux-design">UX Design</li>
-                        <li class="project-controls__item" data-filter=".typography">Typography</li>
+                        <li class="project-controls__item" data-filter="all">All</li>
+                        <li class="project-controls__item" data-filter=".react">React</li>
+                        <li class="project-controls__item" data-filter=".publishing">Publishing</li>
+                        <li class="project-controls__item" data-filter=".promotion">Promotion</li>
                     </ul>
 
-                    <div class="project-container">
-                        <!-- <div class="mix web-design project-container__item">
-                            <div class="project-container__item--wrap">
-                                <div class="project-container__item--title">111111wwwwww...</div>
-                                <button id="portfolio" class="openlayer project-container__item--btn">More</button>
-                            </div>
-                        </div>
-                        <div class="mix web-design typography project-container__item">
-                            <div class="project-container__item--wrap">
-                                <div class="project-container__item--title">111111wwwwww...</div>
-                                <button id="portfolio" class="openlayer project-container__item--btn">More</button>
-                            </div>
-                        </div>
-                        <div class="mix ux-design project-container__item">
-                            <div class="project-container__item--wrap">
-                                <div class="project-container__item--title">111111wwwwww...</div>
-                                <button id="portfolio" class="openlayer project-container__item--btn">More</button>
-                            </div>
-                        </div>
-                        <div class="mix web-design ux-design project-container__item">
-                            <div class="project-container__item--wrap">
-                                <div class="project-container__item--title">111111wwwwww...</div>
-                                <button id="portfolio" class="openlayer project-container__item--btn">More</button>
-                            </div>
-                        </div>
-                        <div class="mix web-design ux-design project-container__item">
-                            <div class="project-container__item--wrap">
-                                <div class="project-container__item--title">111111wwwwww...</div>
-                                <button id="portfolio" class="openlayer project-container__item--btn">More</button>
-                            </div>
-                        </div> -->
-                        <div class="mix web-design ux-design project-container__item">
-                            <div class="project-container__item--wrap">
-                                <div class="project-container__item--title">111111wwwwww...</div>
-                                <button type="button" id="portfolio" class="openlayer project-container__item--btn">More</button>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="project-list">
+                        <li class="mix project-list__wrap react openlayer">
+                            <div class="project-item__title">다방</div>
+                        </li>
+
+                        <li class="mix project-list__wrap react openlayer">
+                            <div class="project-item__title">Write Road</div>
+                        </li>
+
+                        <li class="mix project-list__wrap react openlayer">
+                            <div class="project-item__title">Srello</div>
+                        </li>
+
+                        <li class="mix project-list__wrap publishing openlayer">
+                            <div class="project-item__title">대출페이지</div>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
-            <script>
-                var mixer = mixitup('.project-container', {
-                    controls: {
-                        toggleDefault: 'none'
-                    }
-                });
-            </script>
-
-            <footer id="Call">
-                <div class="footer">
-                    <p class="footer__txt">You can stop by our office for a cup of coffee and just use the contact form below for any questions and inquiries</p>
-                    <div class="footer__txt--email">
-                        <i class="fas fa-envelope"></i>
-                        <span>th.damsom@gmail.com</span>
-                    </div>
-                    <a href="https://github.com/STHyeon" class="footer__link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://toby2009.tistory.com" class="footer__link">
-                        <i class="fab fa-blogger-b"></i>
-                    </a>
+            <section id="contact" class="container">
+                <div class="container__title">Contact</div>
+                <div class="container__inner">
+                    <p class="info-call">문의사항은 이메일로 보내주세요!</p>
+                    <ul class="info-list">
+                        <li class="info-list__item">
+                            <span>Email</span>
+                            th.damsom@gmail.com
+                        </li>
+                        <li class="info-list__item">
+                            <span>Github</span>
+                            <a href="https://github.com/STHyeon">Link</a>
+                        </li>
+                        <li class="info-list__item">
+                            <span>Tech Blog</span>
+                            <a href="https://toby2009.tistory.com/">Link</a>
+                        </li>
+                    </ul>
                 </div>
-            </footer>
+            </section>
         </div>
 
-        <div class="layer_wrap">
-            <div id="layer_portfolio" class="layer data_detail">
-                <div class="layer_slide">
-                    <ul>
-                        <li><img src="/img/details-1-background.jpg" alt="" /></li>
-                        <li><img src="/img/pen.jpg" alt="" /></li>
+        <div class="layer__background">
+            <div id="layer_portfolio" class="layer__wrap">
+                <div class="layer-slide">
+                    <ul class="layer-slide__wrap">
+                        <li class="layer-slide__item"><img src="/img/details-1-background.jpg" alt="" /></li>
+                        <li class="layer-slide__item"><img src="/img/pen.jpg" alt="" /></li>
                     </ul>
-                    <div class="arrow_slider clearfix">
-                        <i id="layer_prev" class="fas fa-angle-left prev"></i>
-                        <i id="layer_next" class="fas fa-angle-right next"></i>
+                    <div class="layer-arrow__wrap">
+                        <img src="../img/right-arrow.svg" alt="" id="layer_prev" class="layer-arrow__item" />
+                        <img src="../img/right-arrow.svg" alt="" id="layer_next" class="layer-arrow__item" />
                     </div>
                 </div>
-                <div class="layer_info">
-                    <div class="layer_title">제목</div>
-                    <div class="layer_content">ChowNow is a commission-free online ordering system and food ordering app helping restaurants feed their hungry customers.</div>
-                </div>
-                <div class="layer_close clearfix">
-                    <a href="">view</a>
-                    <button type="button" class="closelayer">
-                        <i class="fas fa-times"></i>
-                    </button>
+                <div class="layer-description">
+                    <div class="layer-description__title">제목</div>
+                    <div class="layer-description__content">ChowNow is a commission-free online ordering system and food ordering app helping restaurants feed their hungry customers.</div>
+                    <div class="layer-close">
+                        <button type="button" class="layer-close__button">View</button>
+                        <button type="button" class="layer-close__button closelayer">Close</button>
+                    </div>
                 </div>
             </div>
         </div>

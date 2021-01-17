@@ -41,10 +41,10 @@
         width: calc((100% / 3) - 20px);
         height: 320px;
         margin: 10px;
-        border: 1px solid #000;
         font-size: 16px;
         cursor: pointer;
         transition: background-color 0.3s;
+        background-color: rgba(0, 0, 0, 0.3);
 
         &:hover {
             background-color: rgba(0, 0, 0, 0.6);
@@ -58,6 +58,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        font-size: 30px;
+        color: #ffffff;
     }
 }
 

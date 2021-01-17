@@ -73,11 +73,11 @@ a { color: inherit; cursor: pointer; text-decoration: none; }
 
 .project-list::after { display: block; content: ''; clear: both; }
 
-.project-list__wrap { display: inline-block; position: relative; width: calc((100% / 3) - 20px); height: 320px; margin: 10px; border: 1px solid #000; font-size: 16px; cursor: pointer; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; }
+.project-list__wrap { display: inline-block; position: relative; width: calc((100% / 3) - 20px); height: 320px; margin: 10px; font-size: 16px; cursor: pointer; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; background-color: rgba(0, 0, 0, 0.3); }
 
 .project-list__wrap:hover { background-color: rgba(0, 0, 0, 0.6); }
 
-.project-item__title { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.project-item__title { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 30px; color: #ffffff; }
 
 @media only screen and (max-width: 1200px) { .project-list__wrap { width: calc((100% / 2) - 20px); } }
 
@@ -127,7 +127,7 @@ a { color: inherit; cursor: pointer; text-decoration: none; }
 
 .about-item { position: relative; padding: 0 0 0 25px; }
 
-.about-item::before { position: absolute; top: 1px; left: 0; content: ''; width: 20px; height: 20px; border-radius: 5px; background: url("../../img/checkmark.svg") no-repeat center center; background-size: cover; }
+.about-item::before { position: absolute; top: 1px; left: 0; content: ''; width: 20px; height: 20px; border-radius: 5px; background: url("../../img/etc/checkmark.svg") no-repeat center center; background-size: cover; }
 
 .about-item + .about-item { margin: 30px 0 0; }
 
