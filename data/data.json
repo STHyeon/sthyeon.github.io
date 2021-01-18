@@ -38,6 +38,30 @@
         "description": "현 사이트의 대출페이지 리뉴얼을 맡아 제작하였고, <br />IE, Chrome, Safari, Firefox, Opera 등 크로스 브라우징을 하여 어느 브라우저로 접속하여도 동등하게 이용할 수 있습니다.",
         "site":"https://loan.together.co.kr/index.do",
         "github": ""
+    },
+    {
+        "id": "p_kakao",
+        "name": "카카오페이 온투법 통합 로그인 참여",
+        "image": [],
+        "description": "- 상단 GNB 제작<br />- 주민번호 뒷자리 마스킹 처리",
+        "site":"",
+        "github": ""
+    },
+    {
+        "id": "p_together",
+        "name": "투게더앱스",
+        "image": [],
+        "description": "PC/Mobile/App<br />- 유지 및 관리<br />Admin 페이지<br />- 신규 어드민페이지 제작 및 관리",
+        "site":"",
+        "github": ""
+    },
+    {
+        "id": "p_bank",
+        "name": "뱅크샐러드",
+        "image": [],
+        "description": "- 마크업 깨짐 확인 및 수정<br />- 자사 CSS와 싱크 맞춤",
+        "site":"",
+        "github": ""
     }
     
 ]

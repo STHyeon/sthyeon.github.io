@@ -47,6 +47,25 @@
     }
 }
 
+.resume {
+    &__wrap {
+        margin: 0 0 50px;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #000000;
+            transition: border 0.5s, color 0.5s;
+
+            &:hover {
+                border-color: blue;
+                color: blue;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .info-list {
         &__item {
