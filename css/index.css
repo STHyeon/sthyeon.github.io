@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.container { min-height: 100vh; padding: 120px 0 60px; }
+.container { z-index: 2; min-height: 100vh; padding: 120px 0 60px; }
 
 .container:nth-child(3), .container:nth-child(4), .container:nth-child(6) { min-height: 50vh; }
 
@@ -14,6 +14,18 @@ p { margin: 0; }
 .pc { display: block !important; }
 
 .mobile { display: none !important; }
+
+.space { position: fixed; left: 0; right: 0; top: 0; z-index: 0; width: 100px; height: 100px; border-radius: 50%; opacity: 0.5; }
+
+.spacer1 { background: url("../../img/etc/circle-01.png") no-repeat center center; }
+
+.spacer2 { background: url("../../img/etc/circle-02.png") no-repeat center center; }
+
+.spacer3 { background: url("../../img/etc/circle-03.png") no-repeat center center; }
+
+.spacer4 { background: url("../../img/etc/circle-04.png") no-repeat center center; }
+
+.spacer5 { background: url("../../img/etc/circle-05.png") no-repeat center center; }
 
 @media only screen and (max-width: 1200px) { .container__inner { padding: 0 16px; } }
 
@@ -73,11 +85,11 @@ a { color: inherit; cursor: pointer; text-decoration: none; }
 
 .project-list::after { display: block; content: ''; clear: both; }
 
-.project-list__wrap { display: inline-block; position: relative; width: calc((100% / 3) - 20px); height: 320px; margin: 10px; font-size: 16px; cursor: pointer; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; background-color: rgba(0, 0, 0, 0.3); }
+.project-list__wrap { display: inline-block; position: relative; width: calc((100% / 3) - 20px); height: 320px; margin: 10px; font-size: 16px; cursor: pointer; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; background-color: #000000; }
 
 .project-list__wrap:hover { background-color: rgba(0, 0, 0, 0.6); }
 
-.project-item__background { width: 100%; height: 100%; background: url("../../img/project/portfolio.jpg") no-repeat center center; background-size: cover; }
+.project-item__background { width: 100%; height: 100%; opacity: 0.5; }
 
 .project-item__title { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 90%; font-size: 30px; color: #ffffff; text-align: center; }
 
@@ -173,6 +185,10 @@ a { color: inherit; cursor: pointer; text-decoration: none; }
 .layer-close__button { float: left; padding: 11px 30px; background: #001b6c; color: #ffffff; }
 
 .layer-close__button + .layer-close__button { margin: 0 0 0 10px; }
+
+.layer-built { margin: 20px 0 0; }
+
+.layer-built__title { border-bottom: 1px solid #444444; font-weight: 700; font-size: 18px; }
 
 .curtain { position: fixed; top: 0; left: 0; z-index: 99; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
 

@@ -1,27 +1,43 @@
 [
     {
-        "id": "dabang",
+        "id": "p_dabang",
         "name": "다방",
-        "title": "Write",
-        "image": ["a.jpg", "b.jpg"],
-        "description": "aaaaaaaaaaaa",
-        "built": ["abc", "bcv"]
+        "image": ["dabang.jpg", "dabang_1.jpg"],
+        "description": "다방을 Atomic Design과 Storybook을 이용하여 재사용 컴포넌트로 만들었습니다. <br />또한, Pages 단계에서 현 다방에서 지원하지 않는 반응형 페이지로 만들어 보았습니다.",
+        "site": "https://6004f21f0df11e0021f70b45-klfxhphtyt.chromatic.com/",
+        "github": "https://github.com/STHyeon/dabang_clone"
     },
     {
-        "id": "writeroad",
+        "id": "p_writeroad",
         "name": "Write Road",
-        "title": "Write",
-        "image": ["a.jpg", "b.jpg"],
+        "image": ["write.jpg", "write_1.jpg"],
         "description": "자신이 원하는 글귀를 배경사진으로 하고 싶지만 찾기 힘들 때, 직접 만들어서 사용하고 공유할 수 있는 사이트입니다. <br /><br /><b>html2canvas</b>를 이용하여 글과 사진을 하나의 png 파일로 만듭니다. <br /><br />이 프로젝트는 한세톤 - 주제 '#'으로 태그와 연관지어 만들었습니다. 이 해커톤에서는 퍼블리셔로 참여했었고, 따로 <b>React</b>와 <b>Node.js</b>로 재구성해보았습니다.",
-        "built": ["React", "Redux","SCSS", "Node.js", "MongoDB"]
+        "site":"",
+        "github": "https://github.com/STHyeon/writeroad"
     },
     {
-        "id": "srello",
+        "id": "p_srello",
         "name": "Srello",
-        "title": "Write",
-        "image": ["a.jpg", "b.jpg"],
-        "description": "aaaaaaaaaaaa",
-        "built": ["abc", "bcv"]
+        "image": ["srello.jpg", "srello_1.jpg"],
+        "description": "Srello는 일정관리 사이트 <b>Trello</b> 클론 프로젝트입니다. <br />Atomic Design을 적용하여 재사용 가능이 뛰어난 컴포넌트로 만들었고, <br />Trello 핵심 기능인 <b>Drag and Drop</b>기능을 최대한 비슷하게 구현하였습니다.",
+        "site":"https://srello.herokuapp.com/",
+        "github": "https://github.com/STHyeon/srello"
+    },
+    {
+        "id": "p_portfolio",
+        "name": "포트폴리오",
+        "image": ["portfolio.jpg","portfolio_1.jpg"],
+        "description": "현재 보고 계신 사이트로, HTML, SCSS, Jquery를 이용하여 제작하였습니다. <br /><span style='color:gray'>※ Mixitup 라이브러리가 ie 미지원으로 ie화면에서 깨질 수 있습니다.</span>",
+        "site": "",
+        "github": "https://github.com/STHyeon/STHyeon.github.io"
+    },
+    {
+        "id": "p_loan",
+        "name": "대출페이지",
+        "image": ["loan.jpg","loan_1.jpg"],
+        "description": "현 사이트의 대출페이지 리뉴얼을 맡아 제작하였고, <br />IE, Chrome, Safari, Firefox, Opera 등 크로스 브라우징을 하여 어느 브라우저로 접속하여도 동등하게 이용할 수 있습니다.",
+        "site":"https://loan.together.co.kr/index.do",
+        "github": ""
     }
     
 ]

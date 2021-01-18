@@ -107,6 +107,16 @@
     }
 }
 
+.layer-built {
+    margin: 20px 0 0;
+
+    &__title {
+        border-bottom: 1px solid #444444;
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+
 .curtain {
     position: fixed;
     top: 0;
