@@ -3,7 +3,7 @@
         "id": "p_dabang",
         "name": "다방",
         "image": ["dabang.jpg", "dabang_1.jpg"],
-        "description": "다방을 Atomic Design과 Storybook을 이용하여 재사용 컴포넌트로 만들었습니다. <br />또한, Pages 단계에서 현 다방에서 지원하지 않는 반응형 페이지로 만들어 보았습니다.",
+        "description": "다방을 Atomic Design과 Storybook을 이용하여 재사용 컴포넌트로 만들었습니다. <br />또한, 현 다방 사이트에서 지원하지 않는 반응형 페이지와 크로스브라우징을 하여 만들어 보았습니다.",
         "site": "https://6004f21f0df11e0021f70b45-klfxhphtyt.chromatic.com/",
         "github": "https://github.com/STHyeon/dabang_clone"
     },
@@ -35,7 +35,7 @@
         "id": "p_loan",
         "name": "대출페이지",
         "image": ["loan.jpg","loan_1.jpg"],
-        "description": "대출 사이트 리뉴얼을 맡아 제작하였습니다. (퍼블 100%)<br />크로스 브라우징: IE, Chrome, Safari, Firefox, Opera",
+        "description": "대출 사이트 리뉴얼을 맡아 제작하였습니다. (퍼블 - 100%)<br /><br />크로스 브라우징: IE, Chrome, Safari, Firefox, Opera",
         "site":"https://loan.together.co.kr/index.do",
         "github": ""
     },
