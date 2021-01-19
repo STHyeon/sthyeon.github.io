@@ -212,7 +212,7 @@ function CircleMove() {
     })
         .addTo(controller)
         .on('enter leave', function (e) {
-            if (e.type == 'enter') Scroll(3);
+            if (e.type == 'enter') Scroll(1);
         });
 
     new ScrollMagic.Scene({

@@ -100,3 +100,11 @@
         }
     }
 }
+
+@media only screen and (max-width: 360px) {
+    .project-list {
+        &__wrap {
+            height: 260px;
+        }
+    }
+}

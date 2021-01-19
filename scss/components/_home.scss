@@ -3,7 +3,7 @@
     margin: 0;
 
     background: {
-        image: url(https://images.unsplash.com/photo-1432163230927-a32e4fd5a326?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);
+        image: url('../../img/etc/background.jpg');
         attachment: fixed;
         size: cover;
         repeat: no-repeat;
@@ -12,16 +12,20 @@
 }
 
 .main {
-    &__title {
+    &__wrap {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 360px;
+    }
+
+    &__title {
+        position: relative;
+        margin: 0 0 15px;
         padding: 0 0 15px;
         font-weight: 400;
         font-size: 25px;
-        color: #ffffff;
 
         &::after {
             position: absolute;
@@ -29,7 +33,7 @@
             right: 10%;
             bottom: 0;
             content: '';
-            border-bottom: 3px solid #ffffff;
+            border-bottom: 3px solid #000000;
         }
 
         span {
@@ -37,13 +41,21 @@
             font-size: 34px;
         }
     }
+
+    &__reference {
+        font-size: 14px;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 425px) {
     .main {
-        &__title {
+        &__wrap {
             width: 270px;
             padding: 0 0 20px;
+        }
+
+        &__title {
             font-size: 18px;
             line-height: 1.2;
 
